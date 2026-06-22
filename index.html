@@ -79,17 +79,50 @@ main{padding:26px 0 80px}
 .mail .body a.fake{color:var(--blue2);text-decoration:underline;word-break:break-all}
 .mail .cta{display:inline-block;margin-top:12px;background:var(--blue);color:#fff;font-family:var(--head);font-weight:600;
   padding:10px 18px;border-radius:8px;text-decoration:none}
-.trap{margin-top:16px;border:1.5px solid var(--gold);background:var(--goldL);border-radius:12px;padding:16px}
-.trap[hidden]{display:none}
-.trap h4{display:flex;align-items:center;gap:9px;color:var(--blueD);font-size:1.08rem}
-.trap h4 svg{flex:0 0 auto}
-.trap p{margin-top:8px;font-size:.97rem;color:var(--text)}
-.trap ul{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:8px}
-.trap li{display:flex;gap:9px;align-items:flex-start;font-size:.93rem}
-.trap li svg{flex:0 0 auto;margin-top:2px}
-.trap .closing{margin-top:10px;font-family:var(--head);font-weight:600;color:var(--blueD)}
-@keyframes trapIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-.trap:not([hidden]){animation:trapIn .28s ease both}
+@keyframes trapFlash{0%,100%{border-color:var(--gold);box-shadow:0 0 0 0 rgba(184,134,11,0)}
+  50%{border-color:var(--gold2);box-shadow:0 0 0 7px rgba(184,134,11,.34)}}
+/* ---- popup trappola ---- */
+.modal.trapm .mh{background:var(--gold)}
+.tbox{border:2px solid var(--gold);max-width:560px}
+.trapm .mh h2{display:flex;align-items:center;gap:10px;font-size:1.15rem}
+.tbody{padding:20px 22px}
+.tbody p{font-size:1rem;color:var(--text)}
+.tbody .tlab{font-family:var(--head);font-weight:600;color:var(--blueD);margin-top:14px}
+.tbody ul{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:9px}
+.tbody li{display:flex;gap:9px;align-items:flex-start;font-size:.95rem}
+.tbody li svg{flex:0 0 auto;margin-top:2px}
+.tbox.flash{animation:trapFlash .55s ease-in-out 3}
+@media (prefers-reduced-motion:reduce){.tbox.flash{animation:none}}
+/* ---- sezione allenamento ---- */
+.train-bar{margin-bottom:16px}
+.train-prog{display:inline-flex;align-items:center;gap:9px;background:var(--okL);border:1.5px solid var(--ok);
+  border-radius:999px;padding:8px 16px;font-family:var(--head);font-weight:500;color:var(--ok)}
+.train-prog b{color:var(--ok)}
+.train{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.tcard{background:#fff;border:1.5px solid var(--brd);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+.tcard .thead{background:var(--blueL);padding:12px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--brd)}
+.tcard .badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--head);font-weight:600;font-size:.8rem;
+  color:#fff;background:var(--blue);border-radius:999px;padding:4px 11px}
+.tcard .from{font-family:var(--head);font-size:.85rem;color:var(--muted)}
+.tcard .msg{padding:16px;font-size:1rem;line-height:1.5;flex:1}
+.tcard .msg b{color:var(--blueD)}
+.tcard .acts{padding:0 16px 16px;display:flex;flex-direction:column;gap:9px}
+.act{font-family:var(--body);font-size:.97rem;text-align:left;background:#fff;border:1.5px solid var(--brd2);
+  border-radius:10px;padding:11px 14px;min-height:44px;cursor:pointer;color:var(--text);transition:border-color .15s,background .15s}
+.act:hover{border-color:var(--blue);background:var(--blueL)}
+.act.miss{border-color:var(--gold);background:var(--goldL);animation:trapFlash .55s ease-in-out 2}
+.act.good{border-color:var(--ok);background:var(--okL);color:var(--ok);font-weight:600}
+.act:disabled{cursor:default;opacity:.65}
+.tcard.solved{border-color:var(--ok)}
+.solved-msg{display:flex;align-items:flex-start;gap:9px;background:var(--okL);border-top:1px solid var(--ok);
+  padding:13px 16px;font-size:.95rem;color:var(--ok)}
+.solved-msg svg{flex:0 0 auto;margin-top:2px}
+.train-done{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--okL);border:1.5px solid var(--ok);
+  border-radius:14px;padding:18px 20px;margin-top:20px}
+.train-done[hidden]{display:none}
+.train-done div{flex:1;min-width:200px;font-size:1rem}
+.train-done b{color:var(--blueD)}
+@media(max-width:720px){.train{grid-template-columns:1fr}}
 .card{background:#fff;border:1.5px solid var(--brd);border-radius:14px;box-shadow:var(--shadow);padding:18px}
 .card h3{font-size:1.1rem;margin-bottom:10px;display:flex;align-items:center;gap:9px}
 .scaffold ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:6px}
@@ -238,8 +271,9 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 20px 4
     <nav class="tabs" id="tabs">
       <button class="tab active" data-sec="preambolo"><span class="n">1</span>Preambolo</button>
       <button class="tab" data-sec="visione"><span class="n">2</span>Visione attiva</button>
-      <button class="tab" data-sec="verifica"><span class="n">3</span>Verifica</button>
-      <button class="tab" data-sec="meta"><span class="n">4</span>Riflessione</button>
+      <button class="tab" data-sec="allenamento"><span class="n">3</span>Allenamento</button>
+      <button class="tab" data-sec="verifica"><span class="n">4</span>Verifica</button>
+      <button class="tab" data-sec="meta"><span class="n">5</span>Riflessione</button>
     </nav>
     <button class="btn-info" onclick="openInfo()">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><circle cx="12" cy="7.5" r=".6" fill="currentColor"/></svg>
@@ -302,20 +336,6 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 20px 4
           <p style="margin-top:10px">Clicchi qui: <a class="fake" href="#" onclick="trappola(event)">www.la-tua-banca-verifica.online/login</a></p>
           <a class="cta" href="#" onclick="trappola(event)">VERIFICA ORA IL CONTO</a>
           <p style="margin-top:10px;font-size:.85rem;color:var(--muted)">Se non agisce entro 24 ore il conto sarà sospeso.</p>
-          <div class="trap" id="trap-box" hidden role="alert" aria-live="assertive">
-            <h4>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4M12 17v.5"/></svg>
-              Perché hai cliccato quel link?
-            </h4>
-            <p><b>Sei caduto nel tranello anche tu!</b> Per fortuna qui era finto. Ma una mail così è proprio come quella del nonno Paolo: bastava un clic per consegnare i propri dati ai truffatori.</p>
-            <p>I segnali c'erano tutti:</p>
-            <ul>
-              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"><path d="M12 8v5M12 16v.5"/><circle cx="12" cy="12" r="9"/></svg> <span>Il <b>mittente</b> non è la banca: <i>bank-verifica-conto.com</i>.</span></li>
-              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"><path d="M12 8v5M12 16v.5"/><circle cx="12" cy="12" r="9"/></svg> <span>La <b>fretta</b>: "entro 24 ore" serve a non farti ragionare.</span></li>
-              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"><path d="M12 8v5M12 16v.5"/><circle cx="12" cy="12" r="9"/></svg> <span>Il <b>link</b> finisce in <i>.online</i>: non è il sito ufficiale.</span></li>
-            </ul>
-            <p class="closing">La regola: non si clicca mai. Si verifica dal canale ufficiale della banca.</p>
-          </div>
         </div>
       </div>
       <aside class="card scaffold">
@@ -384,6 +404,27 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 20px 4
     </div>
   </section>
 
+  <!-- ============ ALLENAMENTO ANTI-TRAPPOLA ============ -->
+  <section class="panel" id="sec-allenamento">
+    <div class="phead">
+      <h1>Allenamento: riconosci la trappola</h1>
+      <p>Prima della verifica, mettiti alla prova. Per ogni messaggio scegli cosa faresti davvero. Se clicchi sull'esca, scoprirai dove era il tranello: qui sbagliare non costa nulla, serve a imparare.</p>
+      <span class="method-tag">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6 6 14M6 6l8 8"/><circle cx="12" cy="12" r="10"/></svg>
+        Learning by doing (Dewey) &middot; conflitto cognitivo (Piaget)
+      </span>
+    </div>
+    <div class="train-bar">
+      <div class="train-prog"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ok)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span>Trappole evitate: <b id="train-count">0</b> / <b id="train-tot">0</b></span></div>
+    </div>
+    <div class="train" id="train-host"></div>
+    <div class="train-done" id="train-done" hidden>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--ok)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      <div><b>Allenamento completato.</b> Hai imparato a fermarti prima di cliccare. Ora sei pronto per la verifica.</div>
+      <button class="btn btn-primary" onclick="go('verifica')">Vai alla verifica &rarr;</button>
+    </div>
+  </section>
+
   <!-- ============ VERIFICA ============ -->
   <section class="panel" id="sec-verifica">
     <div class="phead">
@@ -432,6 +473,24 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 20px 4
 
 <footer>Scuola Sacra Famiglia &middot; Orzinuovi (BS) &middot; Educazione alla Cittadinanza Digitale</footer>
 
+<!-- MODAL TRAPPOLA (popup in sovraimpressione) -->
+<div class="modal trapm" id="trap-modal" role="alertdialog" aria-modal="true" aria-labelledby="tm-title">
+  <div class="box tbox">
+    <div class="mh">
+      <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4M12 17v.5"/></svg> <span id="tm-title">Sei caduto nel tranello!</span></h2>
+      <button class="x" onclick="chiudiTrappola()" aria-label="Chiudi">&times;</button>
+    </div>
+    <div class="tbody">
+      <p id="tm-msg"></p>
+      <p class="tlab">I segnali da notare:</p>
+      <ul id="tm-seg"></ul>
+      <div class="qnav" style="justify-content:flex-end;margin-top:16px">
+        <button class="btn btn-primary" onclick="chiudiTrappola()">Ho capito</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- MODAL INFO DOCENTI -->
 <div class="modal" id="info">
   <div class="box">
@@ -462,13 +521,14 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 20px 4
       <div class="msec" id="m-str">
         <h3>Struttura dell'esperienza</h3>
         <ul>
-          <li><b>1. Preambolo</b> - leggere una mail di phishing prima del video (osservazione guidata).</li>
+          <li><b>1. Preambolo</b> - leggere una mail di phishing prima del video (osservazione guidata); cliccando l'esca compare il popup-trappola che spiega l'inganno.</li>
           <li><b>2. Visione attiva</b> - player distraction-free + mappa concetti sincronizzata coi timestamp reali del video; click sul concetto = salto alla scena.</li>
-          <li><b>3. Verifica</b> - motore a domanda singola, due tipi (osservazione / comprensione), feedback con spiegazione.</li>
-          <li><b>4. Riflessione</b> - metacognizione finale.</li>
+          <li><b>3. Allenamento anti-trappola</b> - quattro scenari reali (smishing, scareware, oversharing, Wi-Fi pubblico): lo studente sceglie cosa farebbe; se clicca l'esca, un popup mostra dove era il tranello. Esercizio non valutato, a basso rischio, prima della verifica.</li>
+          <li><b>4. Verifica</b> - motore a domanda singola, due tipi (osservazione / comprensione), feedback con spiegazione.</li>
+          <li><b>5. Riflessione</b> - metacognizione finale.</li>
         </ul>
         <h3>Tecniche</h3>
-        <p>Single-file, nessuna dipendenza oltre Google Fonts e YouTube IFrame API. Nessun dato raccolto o salvato (privacy by design, adatto al laboratorio condiviso). Icone SVG inline, zero emoji.</p>
+        <p>Single-file, nessuna dipendenza oltre Google Fonts e YouTube IFrame API. Nessun dato raccolto o salvato (privacy by design, adatto al laboratorio condiviso). Icone SVG inline, zero emoji. Il popup-trappola lampeggia in ambra ed emette un breve suono d'allarme generato via Web Audio (nessun file esterno); animazione disattivata con <i>prefers-reduced-motion</i>.</p>
       </div>
       <div class="msec" id="m-ris">
         <h3>Il video</h3>
@@ -575,14 +635,54 @@ function go(sec){
   if(sec!=='visione' && player && player.pauseVideo){ try{player.pauseVideo();}catch(e){} }
   window.scrollTo({top:0,behavior:'smooth'});
 }
+/* Lezione associata alla mail-trappola del preambolo */
+const LEZIONE_BANCA={
+  titolo:'Sei caduto nel tranello anche tu!',
+  msg:'Per fortuna qui era finto. Ma una mail così è proprio come quella del nonno Paolo: bastava un clic per consegnare i propri dati ai truffatori.',
+  seg:['Il <b>mittente</b> non è la banca: <i>bank-verifica-conto.com</i>.',
+       'La <b>fretta</b>: "entro 24 ore" serve a non farti ragionare.',
+       'Il <b>link</b> finisce in <i>.online</i>: non è il sito ufficiale.']
+};
 function trappola(e){
   if(e){ e.preventDefault(); }
-  var box=document.getElementById('trap-box');
-  if(box){
-    box.hidden=false;
-    box.scrollIntoView({behavior:'smooth',block:'nearest'});
-  }
+  mostraTrappola(LEZIONE_BANCA);
   return false;
+}
+/* Popup modale riusabile: titolo, messaggio, segnali da notare */
+function mostraTrappola(lez){
+  document.getElementById('tm-title').textContent=lez.titolo;
+  document.getElementById('tm-msg').innerHTML=lez.msg;
+  var ul=document.getElementById('tm-seg'); ul.innerHTML='';
+  (lez.seg||[]).forEach(function(s){
+    var li=document.createElement('li');
+    li.innerHTML='<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"><path d="M12 8v5M12 16v.5"/><circle cx="12" cy="12" r="9"/></svg><span>'+s+'</span>';
+    ul.appendChild(li);
+  });
+  var m=document.getElementById('trap-modal');
+  m.classList.add('show');
+  var box=m.querySelector('.tbox');
+  box.classList.remove('flash'); void box.offsetWidth; box.classList.add('flash');
+  suonoTrappola();
+}
+function chiudiTrappola(){ document.getElementById('trap-modal').classList.remove('show'); }
+/* Suono d'allarme generato localmente (Web Audio): due toni discendenti, niente file esterni */
+function suonoTrappola(){
+  try{
+    var AC=window.AudioContext||window.webkitAudioContext;
+    if(!AC) return;
+    var ctx=suonoTrappola._ctx||(suonoTrappola._ctx=new AC());
+    if(ctx.state==='suspended'){ ctx.resume(); }
+    var now=ctx.currentTime;
+    [[660,0],[440,0.17]].forEach(function(p){
+      var o=ctx.createOscillator(), g=ctx.createGain(), t=now+p[1];
+      o.type='sine'; o.frequency.value=p[0];
+      g.gain.setValueAtTime(0,t);
+      g.gain.linearRampToValueAtTime(0.16,t+0.02);
+      g.gain.exponentialRampToValueAtTime(0.001,t+0.16);
+      o.connect(g); g.connect(ctx.destination);
+      o.start(t); o.stop(t+0.18);
+    });
+  }catch(err){}
 }
 function goToScene(t){
   go('visione');
@@ -686,6 +786,100 @@ let flatConcetti=[];
     });
   });
 })();
+
+/* ===================== ALLENAMENTO ANTI-TRAPPOLA ===================== */
+const TRAPPOLE = [
+  {
+    canale:'SMS', da:'Mittente: Corriere Express',
+    testo:'Il tuo pacco è fermo in deposito. Sblocca la consegna pagando <b>1,99&euro;</b> di spese qui: <i>http://corriere-sblocco.info/paga</i>',
+    azioni:[
+      {t:'Pago subito 1,99&euro;', esito:'trap'},
+      {t:'Apro il link per capire meglio', esito:'trap'},
+      {t:'Non clicco: controllo sul sito ufficiale del corriere', esito:'safe'}
+    ],
+    lez:{ titolo:'Smishing: la truffa via SMS', msg:'Anche tu hai abboccato! In un caso vero avresti dato i dati della tua carta a un truffatore.',
+      seg:['L\'indirizzo finisce in <i>.info</i>: non è il corriere ufficiale.','La cifra piccola (1,99&euro;) serve ad abbassare la guardia.','Crea fretta: "fermo in deposito".'] },
+    ok:'Bravo: davanti a un link sospetto ci si ferma e si verifica dal canale ufficiale.'
+  },
+  {
+    canale:'Pop-up', da:'Finestra comparsa mentre navighi',
+    testo:'<b>ATTENZIONE: il tuo computer è infetto!</b> Trovati 5 virus. Scarica subito l\'antivirus gratuito per pulirlo ora.',
+    azioni:[
+      {t:'Scarico l\'antivirus consigliato', esito:'trap'},
+      {t:'Clicco "Pulisci ora"', esito:'trap'},
+      {t:'Chiudo la finestra senza cliccare nulla', esito:'safe'}
+    ],
+    lez:{ titolo:'Scareware: il finto allarme virus', msg:'Sei caduto nel tranello, proprio come Sara nel video! Quel file è il vero pericolo.',
+      seg:['Un sito web non può sapere se il tuo computer ha virus.','Ti spaventa per farti scaricare in fretta.','Il rischio è proprio il file che ti propone.'] },
+    ok:'Esatto: la finestra che ti spinge a scaricare è l\'esca. Chiuderla è la mossa giusta.'
+  },
+  {
+    canale:'Social', da:'Stai per pubblicare un post',
+    testo:'"Partiti per due settimane al mare! <b>Casa vuota fino al 30.</b>" &mdash; con posizione: Hotel Riviera.',
+    azioni:[
+      {t:'Pubblico subito con la posizione', esito:'trap'},
+      {t:'Pubblico, tanto mi seguono solo amici', esito:'trap'},
+      {t:'Aspetto di tornare e non scrivo che la casa è vuota', esito:'safe'}
+    ],
+    lez:{ titolo:'Oversharing: dici troppo di te', msg:'Tranello! Come Claudio nel video: hai annunciato a tutti che la casa è vuota.',
+      seg:['"Casa vuota fino al 30" è un invito per i ladri.','La posizione dice esattamente dove non sei.','Online un post può arrivare ben oltre i tuoi amici.'] },
+    ok:'Giusto: condividere dopo, e senza dire che la casa è vuota, ti mette al sicuro.'
+  },
+  {
+    canale:'Wi-Fi', da:'Sei al bar, rete aperta "FreeWiFi_Bar"',
+    testo:'Vuoi controllare il <b>saldo del conto</b> e fare un bonifico mentre prendi il caffè, usando il Wi-Fi gratuito del locale.',
+    azioni:[
+      {t:'Accedo alla banca dal Wi-Fi del bar', esito:'trap'},
+      {t:'Faccio il bonifico, è veloce', esito:'trap'},
+      {t:'Aspetto una rete sicura: casa o dati del telefono', esito:'safe'}
+    ],
+    lez:{ titolo:'Rete pubblica non sicura', msg:'Tranello! Su una rete aperta qualcuno potrebbe spiare le tue password e i tuoi dati.',
+      seg:['Chiunque sulla stessa rete può intercettare i dati.','Per banca e pagamenti serve una rete fidata.','Meglio i dati del telefono che un Wi-Fi aperto.'] },
+    ok:'Perfetto: per operazioni delicate si usa solo una rete di cui ci si fida.'
+  }
+];
+let trappoleRisolte=0;
+function badgeIcon(canale){
+  var p={ 'SMS':'<rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/>',
+          'Pop-up':'<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/>',
+          'Social':'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>',
+          'Wi-Fi':'<path d="M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/>' }[canale]||'';
+  return '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+p+'</svg>';
+}
+(function buildTraining(){
+  const host=document.getElementById('train-host');
+  document.getElementById('train-tot').textContent=TRAPPOLE.length;
+  TRAPPOLE.forEach((s,i)=>{
+    const card=document.createElement('div');
+    card.className='tcard'; card.id='tc-'+i;
+    let acts='';
+    s.azioni.forEach((a,j)=>{ acts+='<button class="act" id="act-'+i+'-'+j+'" onclick="scegliAzione('+i+','+j+')">'+a.t+'</button>'; });
+    card.innerHTML=
+      '<div class="thead"><span class="badge">'+badgeIcon(s.canale)+s.canale+'</span><span class="from">'+s.da+'</span></div>'+
+      '<div class="msg">'+s.testo+'</div>'+
+      '<div class="acts">'+acts+'</div>';
+    host.appendChild(card);
+  });
+})();
+function scegliAzione(i,j){
+  const s=TRAPPOLE[i], a=s.azioni[j], card=document.getElementById('tc-'+i), btn=document.getElementById('act-'+i+'-'+j);
+  if(card.classList.contains('solved')) return;
+  if(a.esito==='trap'){
+    btn.classList.remove('miss'); void btn.offsetWidth; btn.classList.add('miss');
+    mostraTrappola(s.lez);
+  } else {
+    card.classList.add('solved');
+    Array.prototype.forEach.call(card.querySelectorAll('.act'),el=>{ el.disabled=true; });
+    btn.classList.add('good');
+    const ok=document.createElement('div');
+    ok.className='solved-msg';
+    ok.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ok)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>'+s.ok+'</span>';
+    card.appendChild(ok);
+    trappoleRisolte++;
+    document.getElementById('train-count').textContent=trappoleRisolte;
+    if(trappoleRisolte===TRAPPOLE.length){ document.getElementById('train-done').hidden=false; }
+  }
+}
 
 /* ===================== VERIFICA ===================== */
 function shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
