@@ -100,12 +100,58 @@ main{padding:26px 0 80px}
 .train-prog b{color:var(--ok)}
 .train{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .tcard{background:#fff;border:1.5px solid var(--brd);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
-.tcard .thead{background:var(--blueL);padding:12px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--brd)}
-.tcard .badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--head);font-weight:600;font-size:.8rem;
-  color:#fff;background:var(--blue);border-radius:999px;padding:4px 11px}
-.tcard .from{font-family:var(--head);font-size:.85rem;color:var(--muted)}
-.tcard .msg{padding:16px;font-size:1rem;line-height:1.5;flex:1}
-.tcard .msg b{color:var(--blueD)}
+.tcard .chan{display:flex;align-items:center;gap:9px;padding:11px 14px;border-bottom:1px solid var(--brd);font-family:var(--head);font-size:.82rem;color:var(--muted)}
+.tcard .badge{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.78rem;
+  color:#fff;background:var(--blue);border-radius:999px;padding:4px 10px}
+.mock{padding:16px 14px;display:flex;justify-content:center;background:#eef1f6;flex:1}
+/* ---- cornice telefono ---- */
+.phone{width:250px;max-width:100%;background:#0e1422;border-radius:30px;padding:8px;box-shadow:0 12px 30px rgba(11,42,99,.25)}
+.phone .scr{background:#fff;border-radius:23px;overflow:hidden;position:relative}
+.phone .sbar{height:22px;background:#f3f3f5;display:flex;align-items:center;justify-content:space-between;padding:0 12px;font-size:.62rem;color:#222;font-family:var(--head);font-weight:600}
+.phone .sbar .rgt{display:flex;gap:4px;align-items:center}
+.phone .notch{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:58px;height:5px;background:#0e1422;border-radius:3px;z-index:6}
+/* WhatsApp */
+.wa-h{background:#075E54;color:#fff;display:flex;align-items:center;gap:8px;padding:8px 10px}
+.wa-h .av{width:30px;height:30px;border-radius:50%;background:#cfd8d6;flex:0 0 auto;overflow:hidden}
+.wa-h .nm{font-family:var(--head);font-weight:600;font-size:.82rem;line-height:1.15}
+.wa-h .nm small{display:block;font-weight:400;font-size:.62rem;opacity:.85}
+.wa-h .ic{margin-left:auto;display:flex;gap:11px;opacity:.95}
+.wa-b{background:#e5ddd5;padding:10px 9px;display:flex;flex-direction:column;gap:7px;min-height:158px}
+.wa-msg{max-width:86%;padding:6px 9px;border-radius:8px;font-size:.76rem;line-height:1.35;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.wa-msg .t{display:block;text-align:right;font-size:.56rem;color:#5a6671;margin-top:2px}
+.wa-msg.in{background:#fff;align-self:flex-start;border-top-left-radius:2px}
+.wa-msg.out{background:#dcf8c6;align-self:flex-end;border-top-right-radius:2px}
+.wa-prev{background:#f3f4f4;border-left:3px solid #34b7f1;border-radius:6px;padding:6px 8px;margin-top:5px}
+.wa-prev .pt{font-weight:700;font-size:.7rem;color:#1b2540}
+.wa-prev .pu{font-size:.64rem;color:#5a6480;word-break:break-all}
+/* Instagram */
+.ig-h{display:flex;align-items:center;gap:8px;padding:9px 10px;border-bottom:1px solid #eee}
+.ig-logo{font-family:'Lexend',sans-serif;font-weight:700;font-size:.92rem;background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ig-dm{padding:10px;display:flex;flex-direction:column;gap:9px;min-height:158px}
+.ig-row{display:flex;gap:8px;align-items:flex-start}
+.ig-av{width:30px;height:30px;border-radius:50%;flex:0 0 auto;background:linear-gradient(45deg,#f09433,#bc1888);padding:2px}
+.ig-av span{display:block;width:100%;height:100%;border-radius:50%;background:#dfe3ea}
+.ig-bub{background:#efeff1;border-radius:14px;padding:7px 10px;font-size:.76rem;line-height:1.35;color:#1b2540}
+.ig-name{font-family:var(--head);font-weight:600;font-size:.72rem;display:flex;align-items:center;gap:3px;margin-bottom:3px;color:#1b2540}
+.ig-verif{color:#3897f0}
+/* YouTube */
+.yt-h{display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:1px solid #eee}
+.yt-logo{display:flex;align-items:center;gap:4px;font-family:'Lexend',sans-serif;font-weight:700;font-size:.82rem;color:#1b2540}
+.yt-thumb{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#33415c,#1b2540);display:flex;align-items:center;justify-content:center}
+.yt-thumb .big{position:absolute;left:8px;right:8px;bottom:8px;color:#fff;font-family:var(--head);font-weight:800;font-size:.74rem;text-shadow:0 1px 3px rgba(0,0,0,.6);line-height:1.15}
+.yt-play{width:44px;height:31px;background:#ff0000;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.yt-tt{padding:8px 10px 4px;font-family:var(--head);font-weight:600;font-size:.79rem;color:#1b2540;line-height:1.25}
+.yt-ch{padding:0 10px 8px;font-size:.69rem;color:#5a6480;display:flex;align-items:center;gap:6px}
+.yt-ch .cav{width:18px;height:18px;border-radius:50%;background:#ffd45e}
+.yt-desc{margin:0 10px 10px;background:#f4f6f8;border-radius:8px;padding:7px 9px;font-size:.71rem;color:#33415c;line-height:1.35}
+/* QR */
+.qr-wrap{padding:14px;background:#fff}
+.qr-poster{background:linear-gradient(160deg,#123E90,#0B2A63);border-radius:12px;padding:14px;color:#fff;text-align:center}
+.qr-poster h5{color:#fff;font-family:'Lexend',sans-serif;font-size:.88rem;margin-bottom:3px}
+.qr-poster .sub{font-size:.66rem;opacity:.85;margin-bottom:10px}
+.qr-box{background:#fff;border-radius:8px;padding:9px;width:118px;margin:0 auto}
+.qr-box svg{width:100%;height:auto;display:block}
+.qr-poster .pay{font-size:.7rem;opacity:.92;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:5px}
 .tcard .acts{padding:0 16px 16px;display:flex;flex-direction:column;gap:9px}
 .act{font-family:var(--body);font-size:.97rem;text-align:left;background:#fff;border:1.5px solid var(--brd2);
   border-radius:10px;padding:11px 14px;min-height:44px;cursor:pointer;color:var(--text);transition:border-color .15s,background .15s}
@@ -123,6 +169,60 @@ main{padding:26px 0 80px}
 .train-done div{flex:1;min-width:200px;font-size:1rem}
 .train-done b{color:var(--blueD)}
 @media(max-width:720px){.train{grid-template-columns:1fr}}
+
+/* ===== IMPRONTA DIGITALE (OSINT) ===== */
+.osint-intro{background:var(--goldL);border:1.5px solid var(--gold);border-radius:14px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start;margin-bottom:22px}
+.osint-intro svg{flex:0 0 auto;margin-top:2px}
+.osint-intro b{color:var(--blueD)}
+.dossier{background:#fff;border:1.5px solid var(--brd);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:24px}
+.dossier-h{display:flex;align-items:center;gap:11px;background:var(--blueD);color:#fff;padding:13px 18px}
+.dossier-h .dh-ico{flex:0 0 auto;display:inline-flex}
+.dossier-h h2{color:#fff;font-size:1.05rem;margin:0}
+.dossier-h .stamp{margin-left:auto;font-family:var(--head);font-weight:700;font-size:.72rem;letter-spacing:1.5px;
+  color:#fff;border:2px solid rgba(255,255,255,.7);border-radius:6px;padding:3px 9px;transform:rotate(-4deg)}
+.dossier-b{padding:18px}
+.osint-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-bottom:6px}
+.clue{border:1.5px solid var(--brd);border-radius:12px;overflow:hidden;background:#fbfcfe;display:flex;flex-direction:column}
+.clue .thumb{aspect-ratio:1/1;background:#eef2f9;display:block;width:100%}
+.clue .thumb svg{display:block;width:100%;height:100%}
+.clue .ct{padding:11px 13px}
+.clue .src{font-family:var(--head);font-weight:600;font-size:.78rem;color:var(--blue);display:flex;align-items:center;gap:6px;margin-bottom:5px}
+.clue .rev{font-size:.92rem;color:var(--text);line-height:1.45}
+.clue .tag{display:inline-block;margin-top:8px;font-size:.74rem;font-family:var(--head);font-weight:600;
+  color:var(--gold);background:var(--goldL);border:1px solid var(--gold);border-radius:999px;padding:3px 9px}
+.osint-2col{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}
+.figure{border:1.5px solid var(--brd);border-radius:12px;overflow:hidden;background:#fff}
+.figure .fig-svg{display:block;width:100%;height:auto;background:#eef2f9}
+.figure figcaption{padding:10px 13px;font-size:.86rem;color:var(--muted);border-top:1px solid var(--brd)}
+.figure figcaption b{color:var(--blueD)}
+.profile-card{border:1.5px solid var(--brd2);border-radius:12px;background:#fff;overflow:hidden}
+.profile-card .pc-h{background:var(--blueL);padding:11px 14px;font-family:var(--head);font-weight:700;color:var(--blueD);font-size:.95rem;display:flex;align-items:center;gap:8px}
+.profile-card dl{margin:0;padding:6px 14px 12px}
+.profile-card dt{font-family:var(--head);font-size:.72rem;font-weight:600;color:var(--light);text-transform:uppercase;letter-spacing:.5px;margin-top:9px}
+.profile-card dd{font-size:.97rem;color:var(--text);margin:1px 0 0}
+.routine{margin-top:18px;border:1.5px solid var(--brd);border-radius:12px;background:#fbfcfe;padding:14px 16px}
+.routine h3{font-size:1rem;margin-bottom:10px;display:flex;align-items:center;gap:9px}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{text-align:center;border-radius:8px;padding:7px 2px;font-size:.74rem;font-family:var(--head)}
+.day .dn{font-weight:700;color:var(--muted);display:block;margin-bottom:4px}
+.day.empty{background:var(--goldL);border:1.5px solid var(--gold);color:var(--gold)}
+.day.home{background:var(--okL);border:1.5px solid var(--ok);color:var(--ok)}
+.week-leg{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:.8rem;color:var(--muted)}
+.week-leg span{display:inline-flex;align-items:center;gap:6px}
+.lg-dot{width:13px;height:13px;border-radius:3px;flex:0 0 auto}
+.heist{margin-top:22px;background:var(--goldL);border:1.5px solid var(--gold);border-radius:14px;padding:16px 18px}
+.heist h3{font-size:1.05rem;color:var(--gold);display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.heist ol{margin:6px 0 0 4px;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.heist ol li{font-size:.96rem;line-height:1.5}
+.defend{margin-top:24px;background:var(--okL);border:1.5px solid var(--ok);border-radius:14px;padding:18px 20px}
+.defend h2{color:var(--ok);font-size:1.15rem;display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.defend>p{margin-bottom:12px}
+.defend ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.defend li{display:flex;gap:10px;align-items:flex-start;font-size:.96rem;line-height:1.45}
+.defend li svg{flex:0 0 auto;margin-top:3px;color:var(--ok)}
+.defend li b{color:var(--blueD)}
+@media(max-width:760px){.osint-2col{grid-template-columns:1fr}.defend ul{grid-template-columns:1fr}.week{grid-template-columns:repeat(7,1fr)}}
+
 .card{background:#fff;border:1.5px solid var(--brd);border-radius:14px;box-shadow:var(--shadow);padding:18px}
 .card h3{font-size:1.1rem;margin-bottom:10px;display:flex;align-items:center;gap:9px}
 .scaffold ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:6px}
@@ -272,8 +372,9 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 20px 4
       <button class="tab active" data-sec="preambolo"><span class="n">1</span>Preambolo</button>
       <button class="tab" data-sec="visione"><span class="n">2</span>Visione attiva</button>
       <button class="tab" data-sec="allenamento"><span class="n">3</span>Allenamento</button>
-      <button class="tab" data-sec="verifica"><span class="n">4</span>Verifica</button>
-      <button class="tab" data-sec="meta"><span class="n">5</span>Riflessione</button>
+      <button class="tab" data-sec="impronta"><span class="n">4</span>Impronta digitale</button>
+      <button class="tab" data-sec="verifica"><span class="n">5</span>Verifica</button>
+      <button class="tab" data-sec="meta"><span class="n">6</span>Riflessione</button>
     </nav>
     <button class="btn-info" onclick="openInfo()">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><circle cx="12" cy="7.5" r=".6" fill="currentColor"/></svg>
@@ -420,8 +521,87 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 20px 4
     <div class="train" id="train-host"></div>
     <div class="train-done" id="train-done" hidden>
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--ok)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-      <div><b>Allenamento completato.</b> Hai imparato a fermarti prima di cliccare. Ora sei pronto per la verifica.</div>
-      <button class="btn btn-primary" onclick="go('verifica')">Vai alla verifica &rarr;</button>
+      <div><b>Allenamento completato.</b> Hai imparato a fermarti prima di cliccare. Ora vedi cosa lascia in rete la famiglia Accorti.</div>
+      <button class="btn btn-primary" onclick="go('impronta')">Vai all'impronta digitale &rarr;</button>
+    </div>
+  </section>
+
+  <!-- ============ IMPRONTA DIGITALE (OSINT) ============ -->
+  <section class="panel" id="sec-impronta">
+    <div class="phead">
+      <h1>L'impronta digitale della famiglia Accorti</h1>
+      <p>Ogni post, foto o documento condiviso lascia una traccia. Qui rimettiamo insieme i pezzi che la famiglia ha pubblicato nel video, <b>come farebbe un ladro</b> per studiare un colpo. Non per imitarlo: per capire quanto diciamo di noi senza accorgercene.</p>
+      <span class="method-tag">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        Conflitto cognitivo (Piaget) &middot; pensiero critico
+      </span>
+    </div>
+
+    <div class="osint-intro">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.8 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/></svg>
+      <div><b>Esercizio di consapevolezza.</b> Tutti i dati qui sotto sono ricostruiti dai contenuti che la famiglia mostra nel video. Un estraneo, con pazienza e gli stessi indizi pubblici, può arrivare alle stesse conclusioni. Questo si chiama <b>OSINT</b>: raccogliere informazioni da fonti aperte.</div>
+    </div>
+
+    <!-- DOSSIER: gli indizi raccolti -->
+    <div class="dossier">
+      <div class="dossier-h">
+        <span class="dh-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h6l2 2h8v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg></span>
+        <h2>Fascicolo &middot; Famiglia Accorti</h2>
+        <span class="stamp">RACCOLTO ONLINE</span>
+      </div>
+      <div class="dossier-b">
+        <div class="osint-grid" id="osint-grid"></div>
+      </div>
+    </div>
+
+    <!-- MAPPA + PROFILO -->
+    <div class="osint-2col">
+      <figure class="figure" id="osint-map"></figure>
+      <div>
+        <div class="profile-card">
+          <div class="pc-h">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+            Profilo ricostruito
+          </div>
+          <dl>
+            <dt>Nucleo familiare</dt><dd>Paolo (nonno, 75 anni), i figli e due bambini in et&agrave; scolare.</dd>
+            <dt>Indirizzo probabile</dt><dd>Quartiere vicino a Via Roma / Via Verdi &mdash; Orzinuovi (BS).</dd>
+            <dt>Documenti esposti</dt><dd>Carta d'Identit&agrave; Elettronica del nonno inquadrata in un post.</dd>
+            <dt>Abitudini</dt><dd>Scuola al mattino, palestra il pomeriggio, vacanza al mare in corso.</dd>
+            <dt>Valore in casa</dt><dd>Foto con TV nuova, console di gioco, gioielli in vista.</dd>
+          </dl>
+        </div>
+        <div class="routine">
+          <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Quando la casa &egrave; vuota</h3>
+          <div class="week" id="osint-week"></div>
+          <div class="week-leg">
+            <span><span class="lg-dot" style="background:var(--goldL);border:1.5px solid var(--gold)"></span> Casa probabilmente vuota</span>
+            <span><span class="lg-dot" style="background:var(--okL);border:1.5px solid var(--ok)"></span> Famiglia in casa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CIE + PIANO -->
+    <div class="osint-2col" style="margin-top:18px">
+      <figure class="figure" id="osint-cie"></figure>
+      <div class="heist">
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6Z"/><path d="M9 12l2 2 4-4"/></svg> Come un ladro userebbe questi dati</h3>
+        <ol>
+          <li><b>Trova la casa:</b> incrocia foto, posizione e nome del quartiere.</li>
+          <li><b>Sceglie il momento:</b> il post "partiti per il mare" dice che la casa &egrave; vuota.</li>
+          <li><b>Conosce gli orari:</b> scuola e palestra svuotano la casa a ore fisse.</li>
+          <li><b>Ruba l'identit&agrave;:</b> con i dati della CIE pu&ograve; aprire truffe a nome del nonno.</li>
+          <li><b>Colpisce:</b> sa cosa c'&egrave; di valore e quando nessuno c'&egrave;.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- DIFESA: spezzare la mappa -->
+    <div class="defend">
+      <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6Z"/></svg> Come spezzare la mappa</h2>
+      <p>Ogni indizio si pu&ograve; togliere. Bastano piccole abitudini per rendere il quadro impossibile da ricostruire.</p>
+      <ul id="osint-defend"></ul>
     </div>
   </section>
 
@@ -523,12 +703,13 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 20px 4
         <ul>
           <li><b>1. Preambolo</b> - leggere una mail di phishing prima del video (osservazione guidata); cliccando l'esca compare il popup-trappola che spiega l'inganno.</li>
           <li><b>2. Visione attiva</b> - player distraction-free + mappa concetti sincronizzata coi timestamp reali del video; click sul concetto = salto alla scena.</li>
-          <li><b>3. Allenamento anti-trappola</b> - quattro scenari reali (smishing, scareware, oversharing, Wi-Fi pubblico): lo studente sceglie cosa farebbe; se clicca l'esca, un popup mostra dove era il tranello. Esercizio non valutato, a basso rischio, prima della verifica.</li>
-          <li><b>4. Verifica</b> - motore a domanda singola, due tipi (osservazione / comprensione), feedback con spiegazione.</li>
-          <li><b>5. Riflessione</b> - metacognizione finale.</li>
+          <li><b>3. Allenamento anti-trappola</b> - quattro messaggi-esca ricostruiti come mockup realistici di smartphone (WhatsApp, Instagram, YouTube, QR code): lo studente sceglie cosa farebbe; se clicca l'esca, un popup mostra dove era il tranello. Esercizio non valutato, a basso rischio, prima della verifica.</li>
+          <li><b>4. Impronta digitale (OSINT)</b> - ricostruzione, dagli indizi che la famiglia pubblica nel video, del profilo di casa e abitudini "con l'occhio del ladro": fascicolo, mappa del quartiere, documento (CIE) esposto, calendario di quando la casa &egrave; vuota e piano del colpo. Si chiude con il pannello costruttivo "Come spezzare la mappa" (azioni di privacy). Forte conflitto cognitivo sull'oversharing.</li>
+          <li><b>5. Verifica</b> - motore a domanda singola, due tipi (osservazione / comprensione), feedback con spiegazione.</li>
+          <li><b>6. Riflessione</b> - metacognizione finale.</li>
         </ul>
         <h3>Tecniche</h3>
-        <p>Single-file, nessuna dipendenza oltre Google Fonts e YouTube IFrame API. Nessun dato raccolto o salvato (privacy by design, adatto al laboratorio condiviso). Icone SVG inline, zero emoji. Il popup-trappola lampeggia in ambra ed emette un breve suono d'allarme generato via Web Audio (nessun file esterno); animazione disattivata con <i>prefers-reduced-motion</i>.</p>
+        <p>Single-file, nessuna dipendenza oltre Google Fonts e YouTube IFrame API. Nessun dato raccolto o salvato (privacy by design, adatto al laboratorio condiviso). Icone SVG inline, zero emoji; i mockup degli smartphone, la mappa, la CIE e il QR sono SVG costruiti in pagina (il QR &egrave; generato a runtime, decorativo e non scansionabile). Il popup-trappola lampeggia in ambra ed emette un breve suono d'allarme generato via Web Audio (nessun file esterno); animazione disattivata con <i>prefers-reduced-motion</i>.</p>
       </div>
       <div class="msec" id="m-ris">
         <h3>Il video</h3>
@@ -790,61 +971,138 @@ let flatConcetti=[];
 /* ===================== ALLENAMENTO ANTI-TRAPPOLA ===================== */
 const TRAPPOLE = [
   {
-    canale:'SMS', da:'Mittente: Corriere Express',
-    testo:'Il tuo pacco è fermo in deposito. Sblocca la consegna pagando <b>1,99&euro;</b> di spese qui: <i>http://corriere-sblocco.info/paga</i>',
-    azioni:[
-      {t:'Pago subito 1,99&euro;', esito:'trap'},
-      {t:'Apro il link per capire meglio', esito:'trap'},
-      {t:'Non clicco: controllo sul sito ufficiale del corriere', esito:'safe'}
+    skin:'wa', canale:'WhatsApp', contesto:'Messaggio da un numero sconosciuto',
+    head:{ name:'Forse Mamma?', sub:'+39 351 044 21 90' },
+    msgs:[
+      { t:'Ciao tesoro, sono la mamma. Ho cambiato telefono, salva questo numero!', time:'14:32' },
+      { t:'Mi si &egrave; bloccata l\'app della banca. Puoi farmi tu un bonifico urgente di 150&euro;? Te li ridò stasera, promesso.', time:'14:33',
+        prev:{ pt:'Paga ora &middot; BancaPosta', pu:'bancaposta-clienti.online/pay' } }
     ],
-    lez:{ titolo:'Smishing: la truffa via SMS', msg:'Anche tu hai abboccato! In un caso vero avresti dato i dati della tua carta a un truffatore.',
-      seg:['L\'indirizzo finisce in <i>.info</i>: non è il corriere ufficiale.','La cifra piccola (1,99&euro;) serve ad abbassare la guardia.','Crea fretta: "fermo in deposito".'] },
-    ok:'Bravo: davanti a un link sospetto ci si ferma e si verifica dal canale ufficiale.'
+    azioni:[
+      {t:'Faccio subito il bonifico di 150&euro;', esito:'trap'},
+      {t:'Apro il link per pagare', esito:'trap'},
+      {t:'Chiamo la mamma al suo numero vero per verificare', esito:'safe'}
+    ],
+    lez:{ titolo:'Truffa del finto parente', msg:'Tranello! Non era tua madre ma un truffatore: ti ha messo fretta per non farti riflettere.',
+      seg:['Un numero sconosciuto dice di essere un familiare.','Chiede soldi con urgenza: la fretta &egrave; l\'arma.','Il link non &egrave; la banca vera: finisce in <i>.online</i>.'] },
+    ok:'Giusto: si verifica sempre richiamando la persona al numero che conosci già.'
   },
   {
-    canale:'Pop-up', da:'Finestra comparsa mentre navighi',
-    testo:'<b>ATTENZIONE: il tuo computer è infetto!</b> Trovati 5 virus. Scarica subito l\'antivirus gratuito per pulirlo ora.',
-    azioni:[
-      {t:'Scarico l\'antivirus consigliato', esito:'trap'},
-      {t:'Clicco "Pulisci ora"', esito:'trap'},
-      {t:'Chiudo la finestra senza cliccare nulla', esito:'safe'}
+    skin:'ig', canale:'Instagram', contesto:'Messaggio diretto (DM) ricevuto sul profilo',
+    msgs:[
+      { name:'assistenza.account', verif:true, t:'Abbiamo rilevato un accesso sospetto al tuo profilo. Verifica la tua identità entro 24 ore o l\'account verrà disattivato.' },
+      { name:'assistenza.account', verif:true, t:'Conferma qui: verifica-instagram-account.com/login' }
     ],
-    lez:{ titolo:'Scareware: il finto allarme virus', msg:'Sei caduto nel tranello, proprio come Sara nel video! Quel file è il vero pericolo.',
-      seg:['Un sito web non può sapere se il tuo computer ha virus.','Ti spaventa per farti scaricare in fretta.','Il rischio è proprio il file che ti propone.'] },
-    ok:'Esatto: la finestra che ti spinge a scaricare è l\'esca. Chiuderla è la mossa giusta.'
+    azioni:[
+      {t:'Inserisco le mie credenziali per verificare', esito:'trap'},
+      {t:'Clicco il link per non perdere l\'account', esito:'trap'},
+      {t:'Ignoro: controllo dalle impostazioni ufficiali dell\'app', esito:'safe'}
+    ],
+    lez:{ titolo:'Phishing dell\'account social', msg:'Tranello! Quel profilo non &egrave; Instagram: voleva la tua password per rubarti l\'account.',
+      seg:['Instagram non ti scrive in DM per minacciarti.','La scadenza "24 ore" serve a metterti fretta.','Il link non &egrave; <i>instagram.com</i> ma un sito copia.'] },
+    ok:'Esatto: i controlli sull\'account si fanno solo dalle impostazioni ufficiali dell\'app.'
   },
   {
-    canale:'Social', da:'Stai per pubblicare un post',
-    testo:'"Partiti per due settimane al mare! <b>Casa vuota fino al 30.</b>" &mdash; con posizione: Hotel Riviera.',
+    skin:'yt', canale:'YouTube', contesto:'Video consigliato che compare tra i suggeriti',
+    thumb:'PS5 GRATIS &mdash; solo oggi!',
+    title:'REGALO 100 PlayStation 5 &mdash; clicca il link in descrizione!!',
+    channel:'Sony Official Free &middot; 1,2 Mln visualizzazioni',
+    desc:'Per ricevere la tua PS5 gratis registrati qui: <b>ps5-regalo-gratis.online</b> &mdash; affrettati, posti limitati!',
     azioni:[
-      {t:'Pubblico subito con la posizione', esito:'trap'},
-      {t:'Pubblico, tanto mi seguono solo amici', esito:'trap'},
-      {t:'Aspetto di tornare e non scrivo che la casa è vuota', esito:'safe'}
+      {t:'Mi registro per ricevere la PS5', esito:'trap'},
+      {t:'Apro il link in descrizione', esito:'trap'},
+      {t:'Lascio perdere: &egrave; troppo bello per essere vero', esito:'safe'}
     ],
-    lez:{ titolo:'Oversharing: dici troppo di te', msg:'Tranello! Come Claudio nel video: hai annunciato a tutti che la casa è vuota.',
-      seg:['"Casa vuota fino al 30" è un invito per i ladri.','La posizione dice esattamente dove non sei.','Online un post può arrivare ben oltre i tuoi amici.'] },
-    ok:'Giusto: condividere dopo, e senza dire che la casa è vuota, ti mette al sicuro.'
+    lez:{ titolo:'Finto regalo (scam giveaway)', msg:'Tranello! Nessuno regala 100 PS5: volevano i tuoi dati o un pagamento per finte "spese di spedizione".',
+      seg:['Premi enormi e gratuiti sono un\'esca classica.','"Affrettati, posti limitati" crea fretta.','Il canale finge di essere ufficiale ma non lo &egrave;.'] },
+    ok:'Bravo: se &egrave; troppo bello per essere vero, &egrave; una truffa.'
   },
   {
-    canale:'Wi-Fi', da:'Sei al bar, rete aperta "FreeWiFi_Bar"',
-    testo:'Vuoi controllare il <b>saldo del conto</b> e fare un bonifico mentre prendi il caffè, usando il Wi-Fi gratuito del locale.',
+    skin:'qr', canale:'QR code', contesto:'Volantino con QR trovato sul parabrezza dell\'auto',
+    poster:{ h5:'PARCHEGGIO COMUNALE', sub:'Paga la sosta inquadrando il QR', seed:48291,
+      pay:'Pagamento rapido &middot; scade tra 10 min' },
     azioni:[
-      {t:'Accedo alla banca dal Wi-Fi del bar', esito:'trap'},
-      {t:'Faccio il bonifico, è veloce', esito:'trap'},
-      {t:'Aspetto una rete sicura: casa o dati del telefono', esito:'safe'}
+      {t:'Inquadro il QR e pago con la carta', esito:'trap'},
+      {t:'Inserisco i dati della carta nel sito del QR', esito:'trap'},
+      {t:'Pago alla colonnina ufficiale o con l\'app del Comune', esito:'safe'}
     ],
-    lez:{ titolo:'Rete pubblica non sicura', msg:'Tranello! Su una rete aperta qualcuno potrebbe spiare le tue password e i tuoi dati.',
-      seg:['Chiunque sulla stessa rete può intercettare i dati.','Per banca e pagamenti serve una rete fidata.','Meglio i dati del telefono che un Wi-Fi aperto.'] },
-    ok:'Perfetto: per operazioni delicate si usa solo una rete di cui ci si fida.'
+    lez:{ titolo:'Quishing: la truffa del QR code', msg:'Tranello! Quel QR portava a un sito falso che copiava i dati della tua carta.',
+      seg:['Un QR su un volantino può portare ovunque.','Non vedi l\'indirizzo prima di inquadrarlo.','"Scade tra 10 min" &egrave; la solita fretta.'] },
+    ok:'Giusto: per pagare si usano i canali ufficiali, non un QR trovato in giro.'
   }
 ];
 let trappoleRisolte=0;
-function badgeIcon(canale){
-  var p={ 'SMS':'<rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/>',
-          'Pop-up':'<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/>',
-          'Social':'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>',
-          'Wi-Fi':'<path d="M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/>' }[canale]||'';
-  return '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+p+'</svg>';
+
+/* ---- QR decorativo generato al volo (deterministico, non scansionabile) ---- */
+function qrSVG(seed){
+  var N=25, s=(seed||7)>>>0;
+  function rnd(){ s=(s*1664525+1013904223)>>>0; return (s>>>8)/0x1000000; }
+  var g=[], res=[], x, y;
+  for(y=0;y<N;y++){ g[y]=[]; res[y]=[]; for(x=0;x<N;x++){ g[y][x]=0; res[y][x]=false; } }
+  function finder(ox,oy){
+    for(var yy=-1;yy<=7;yy++)for(var xx=-1;xx<=7;xx++){
+      var px=ox+xx, py=oy+yy;
+      if(px<0||py<0||px>=N||py>=N) continue;
+      res[py][px]=true;
+      var on=(xx>=0&&xx<=6&&yy>=0&&yy<=6)&&((xx===0||xx===6||yy===0||yy===6)||(xx>=2&&xx<=4&&yy>=2&&yy<=4));
+      g[py][px]=on?1:0;
+    }
+  }
+  finder(0,0); finder(N-7,0); finder(0,N-7);
+  for(var i=8;i<N-8;i++){ g[6][i]=(i%2===0)?1:0; res[6][i]=true; g[i][6]=(i%2===0)?1:0; res[i][6]=true; }
+  for(y=0;y<N;y++)for(x=0;x<N;x++){ if(!res[y][x]) g[y][x]= rnd()>0.5?1:0; }
+  var r='';
+  for(y=0;y<N;y++)for(x=0;x<N;x++){ if(g[y][x]) r+='<rect x="'+x+'" y="'+y+'" width="1" height="1"/>'; }
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+N+' '+N+'" shape-rendering="crispEdges" fill="#0e1422" role="img" aria-label="QR code">'+r+'</svg>';
+}
+function chIcon(skin){
+  var p={
+    wa:'<path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5Z"/>',
+    ig:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6"/>',
+    yt:'<rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9.2 15 12l-5 2.8z"/>',
+    qr:'<rect x="3" y="3" width="6" height="6"/><rect x="15" y="3" width="6" height="6"/><rect x="3" y="15" width="6" height="6"/><path d="M15 15h3v3M21 15v6h-6"/>'
+  }[skin]||'';
+  return '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+p+'</svg>';
+}
+function sbar(){
+  return '<div class="sbar"><span>9:41</span><span class="rgt"><svg width="34" height="9" viewBox="0 0 34 9" fill="#222"><rect x="0" y="3" width="2.4" height="6" rx="1"/><rect x="4" y="2" width="2.4" height="7" rx="1"/><rect x="8" y="1" width="2.4" height="8" rx="1"/><path d="M14 4a4 4 0 0 1 6 0M15.2 5.4a2.2 2.2 0 0 1 3.6 0" fill="none" stroke="#222" stroke-width="1"/><circle cx="17" cy="7" r="0.9"/><rect x="24" y="2" width="8" height="5" rx="1.4" fill="none" stroke="#222" stroke-width="1"/><rect x="25.2" y="3.2" width="5" height="2.6" rx="0.4"/><rect x="32.2" y="3.4" width="1.2" height="2.2" rx="0.6"/></svg></span></div>';
+}
+function waIcons(){
+  return '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m23 7-7 5 7 5z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>'+
+    '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>';
+}
+function ytLogo(){
+  return '<svg width="22" height="16" viewBox="0 0 24 24" fill="#ff0000"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .7 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.3 12 31 31 0 0 0 23 7.5z"/><path d="M10 15V9l5 3z" fill="#fff"/></svg>';
+}
+function igVerif(){
+  return ' <svg class="ig-verif" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 1.8 3-.2 1 2.8 2.4 1.8-1 2.8 1 2.8-2.4 1.8-1 2.8-3-.2L12 22l-2.4-1.8-3 .2-1-2.8L3.2 14l1-2.8-1-2.8 2.4-1.8 1-2.8 3 .2z"/></svg>';
+}
+function renderMock(s){
+  var top='<div class="phone"><div class="scr"><span class="notch"></span>'+sbar();
+  if(s.skin==='wa'){
+    var b='';
+    s.msgs.forEach(function(m){
+      var prev = m.prev ? '<div class="wa-prev"><div class="pt">'+m.prev.pt+'</div><div class="pu">'+m.prev.pu+'</div></div>' : '';
+      b+='<div class="wa-msg in">'+m.t+prev+'<span class="t">'+m.time+'</span></div>';
+    });
+    return top+'<div class="wa-h"><span class="av"></span><span class="nm">'+s.head.name+'<small>'+s.head.sub+'</small></span><span class="ic">'+waIcons()+'</span></div><div class="wa-b">'+b+'</div></div></div>';
+  }
+  if(s.skin==='ig'){
+    var rows='';
+    s.msgs.forEach(function(m){
+      rows+='<div class="ig-row"><span class="ig-av"><span></span></span><div><div class="ig-name">'+m.name+(m.verif?igVerif():'')+'</div><div class="ig-bub">'+m.t+'</div></div></div>';
+    });
+    return top+'<div class="ig-h"><span class="ig-logo">Instagram</span></div><div class="ig-dm">'+rows+'</div></div></div>';
+  }
+  if(s.skin==='yt'){
+    return top+'<div class="yt-h"><span class="yt-logo">'+ytLogo()+'YouTube</span></div>'+
+      '<div class="yt-thumb"><span class="yt-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span><span class="big">'+s.thumb+'</span></div>'+
+      '<div class="yt-tt">'+s.title+'</div><div class="yt-ch"><span class="cav"></span>'+s.channel+'</div><div class="yt-desc">'+s.desc+'</div></div></div>';
+  }
+  if(s.skin==='qr'){
+    return top+'<div class="qr-wrap"><div class="qr-poster"><h5>'+s.poster.h5+'</h5><div class="sub">'+s.poster.sub+'</div><div class="qr-box">'+qrSVG(s.poster.seed)+'</div><div class="pay"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'+s.poster.pay+'</div></div></div></div></div>';
+  }
+  return top+'</div></div>';
 }
 (function buildTraining(){
   const host=document.getElementById('train-host');
@@ -855,12 +1113,79 @@ function badgeIcon(canale){
     let acts='';
     s.azioni.forEach((a,j)=>{ acts+='<button class="act" id="act-'+i+'-'+j+'" onclick="scegliAzione('+i+','+j+')">'+a.t+'</button>'; });
     card.innerHTML=
-      '<div class="thead"><span class="badge">'+badgeIcon(s.canale)+s.canale+'</span><span class="from">'+s.da+'</span></div>'+
-      '<div class="msg">'+s.testo+'</div>'+
+      '<div class="chan"><span class="badge">'+chIcon(s.skin)+s.canale+'</span><span>'+s.contesto+'</span></div>'+
+      '<div class="mock">'+renderMock(s)+'</div>'+
       '<div class="acts">'+acts+'</div>';
     host.appendChild(card);
   });
 })();
+
+/* ===================== IMPRONTA DIGITALE (OSINT) ===================== */
+const ASSET_MAP = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" font-family="Atkinson Hyperlegible, system-ui, sans-serif"><title>Mappa del quartiere della Famiglia Accorti</title><rect width="400" height="280" fill="#e9eef1"/><path d="M270 150 q40 -30 90 -10 q20 50 -20 90 q-60 20 -80 -20 q-15 -40 10 -60 Z" fill="#c5e4c0"/><text x="305" y="215" font-size="9" fill="#4e7a47">Parco</text><path d="M0 0 L80 0 q-10 40 -50 55 Q5 65 0 50 Z" fill="#aed4ef"/><g fill="#dfe5e8"><rect x="40" y="95" width="55" height="45" rx="3"/><rect x="110" y="95" width="60" height="45" rx="3"/><rect x="40" y="160" width="55" height="55" rx="3"/><rect x="110" y="170" width="60" height="45" rx="3"/><rect x="190" y="40" width="70" height="50" rx="3"/><rect x="40" y="40" width="50" height="38" rx="3"/></g><g stroke="#c4ccd1" stroke-width="16" fill="none" stroke-linecap="round"><path d="M0 150 H400"/><path d="M100 0 V280"/><path d="M180 0 V280"/></g><g stroke="#ffffff" stroke-width="11" fill="none" stroke-linecap="round"><path d="M0 150 H400"/><path d="M100 0 V280"/><path d="M180 0 V280"/></g><path d="M0 235 H400" stroke="#f6e4a0" stroke-width="14" stroke-linecap="round"/><path d="M0 235 H400" stroke="#fff" stroke-width="2" stroke-dasharray="10 8"/><text x="210" y="145" font-size="8.5" fill="#8a97a0">Via Verdi</text><text x="106" y="120" font-size="8.5" fill="#8a97a0" transform="rotate(90 106 120)">Via Roma</text><text x="8" y="231" font-size="8.5" fill="#9a8a55">Viale Stazione</text><g transform="translate(225 95)"><circle cx="0" cy="0" r="11" fill="#123E90"/><path d="M-6 1 L0 -4 L6 1 V6 H-6 Z" fill="#fff"/><text x="0" y="24" font-size="9" fill="#123E90" text-anchor="middle" font-weight="700">Scuola</text></g><g transform="translate(330 110)"><circle cx="0" cy="0" r="11" fill="#123E90"/><g stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M-5 0H5"/><path d="M-5 -3V3M5 -3V3"/></g><text x="0" y="24" font-size="9" fill="#123E90" text-anchor="middle" font-weight="700">Palestra</text></g><g transform="translate(110 175)"><circle cx="0" cy="0" r="26" fill="#B8860B" opacity="0.16"/><circle cx="0" cy="0" r="18" fill="#B8860B" opacity="0.22"/><path d="M0 6 C-13 -6 -13 -22 0 -22 C13 -22 13 -6 0 6 Z" fill="#123E90"/><circle cx="0" cy="-14" r="7" fill="#fff"/><path d="M-4 -13 L0 -17 L4 -13 V-9 H-4 Z" fill="#123E90"/><text x="0" y="22" font-size="9.5" fill="#0B2A63" text-anchor="middle" font-weight="700">Casa Accorti</text></g></svg>';
+
+const ASSET_CIE = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 214" role="img" font-family="Atkinson Hyperlegible, system-ui, sans-serif"><title>Carta d\'Identit&agrave; Elettronica esposta</title><defs><linearGradient id="cieg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3f4f7"/><stop offset="1" stop-color="#dfe3ec"/></linearGradient><clipPath id="ciecard"><rect x="0" y="0" width="340" height="214" rx="14"/></clipPath></defs><g clip-path="url(#ciecard)"><rect width="340" height="214" fill="url(#cieg)"/><g stroke="#c9d0de" stroke-width="0.7" fill="none" opacity="0.6"><path d="M-20 60 q60 -30 120 0 t120 0 t120 0 t120 0"/><path d="M-20 80 q60 -30 120 0 t120 0 t120 0 t120 0"/><path d="M-20 170 q60 -30 120 0 t120 0 t120 0 t120 0"/></g><g transform="translate(0,0)"><rect x="0" y="0" width="113" height="7" fill="#0a7a3f"/><rect x="113" y="0" width="114" height="7" fill="#f4f4f4"/><rect x="227" y="0" width="113" height="7" fill="#bb2d2d"/></g><text x="18" y="28" font-size="9.5" letter-spacing="1.2" fill="#0B2A63" font-weight="700">REPUBBLICA ITALIANA</text><text x="18" y="42" font-size="12" letter-spacing="0.6" fill="#123E90" font-weight="700">CARTA DI IDENTIT&Agrave;</text><text x="312" y="40" font-size="15" fill="#123E90" font-weight="700" text-anchor="end" font-family="Lexend, sans-serif">CIE</text><g transform="translate(18,58)"><rect x="0" y="0" width="80" height="100" rx="4" fill="#cfd6e2"/><circle cx="40" cy="38" r="20" fill="#9aa6ba"/><path d="M10 96 C12 66 68 66 70 96 Z" fill="#9aa6ba"/></g><g transform="translate(116,150)"><rect x="0" y="0" width="34" height="26" rx="4" fill="#cda434"/><rect x="2" y="2" width="30" height="22" rx="3" fill="#e3c45e"/><g stroke="#b6902a" stroke-width="1.2"><path d="M0 9H34M0 17H34M11 0V26M23 0V26"/></g><rect x="11" y="9" width="12" height="8" fill="#d9b945"/></g><g font-size="6.5" fill="#7a869a" letter-spacing="0.5"><text x="116" y="64">COGNOME / SURNAME</text><text x="116" y="88">NOME / NAME</text><text x="116" y="112">NATO/A IL / DATE OF BIRTH</text><text x="232" y="112">SESSO / SEX</text><text x="116" y="136">COMUNE / MUNICIPALITY</text></g><g font-size="11" fill="#1b2540" font-weight="700"><text x="116" y="76">ACCORTI</text><text x="116" y="100">PAOLO</text><text x="116" y="124">14.03.1951</text><text x="232" y="124">M</text><text x="116" y="148">ORZINUOVI (BS)</text></g><text x="312" y="200" font-size="9" fill="#5a6480" text-anchor="end" font-family="monospace">CA 1234 5678</text><circle cx="295" cy="120" r="20" fill="none" stroke="#a9b4c8" stroke-width="1.4" opacity="0.7"/><circle cx="295" cy="120" r="11" fill="#e9ecf3" opacity="0.7"/><g transform="rotate(-9 250 70)"><rect x="150" y="58" width="210" height="22" fill="#B8860B" opacity="0.92"/><text x="255" y="73" font-size="12" fill="#fff" text-anchor="middle" font-weight="700" letter-spacing="2">IDENTIT&Agrave; ESPOSTA</text></g></g><rect x="0.5" y="0.5" width="339" height="213" rx="14" fill="none" stroke="#c2c9d6"/></svg>';
+
+const FOTO_SPIAGGIA = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img"><title>Foto vacanza al mare</title><rect width="120" height="120" fill="#bfe3f7"/><circle cx="92" cy="26" r="13" fill="#ffd45e"/><rect x="0" y="66" width="120" height="34" fill="#5bbbe0"/><path d="M0 84 q30 -8 60 0 t60 0 V100 H0 Z" fill="#7fd0ee"/><rect x="0" y="96" width="120" height="24" fill="#f2dca0"/><path d="M0 96 q60 -10 120 0 V100 H0 Z" fill="#e9cf86"/><g transform="translate(30 70)"><path d="M0 26 L0 -2" stroke="#9a6b3f" stroke-width="2.4"/><path d="M0 -2 q-20 -4 -22 8 q14 -6 22 0 q8 -6 22 0 q-2 -12 -22 -8 Z" fill="#e2654f"/></g><g transform="translate(80 88)"><ellipse cx="0" cy="10" rx="13" ry="4" fill="#d8b86a"/><path d="M-10 10 q10 -16 20 0" fill="#ef8b5c"/></g></svg>';
+
+const FOTO_BIMBI = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img"><title>Foto dei bambini</title><rect width="120" height="120" fill="#ffe9d6"/><rect x="0" y="86" width="120" height="34" fill="#bfe0a8"/><g transform="translate(42 40)"><circle cx="0" cy="0" r="13" fill="#f4c19a"/><path d="M-12 0 a12 12 0 0 1 24 0 Z" fill="#7a4a28"/><circle cx="-4" cy="1" r="1.6" fill="#3a2a1a"/><circle cx="4" cy="1" r="1.6" fill="#3a2a1a"/><path d="M-4 7 q4 3 8 0" stroke="#b06a3c" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M-11 14 q11 -7 22 0 V40 H-11 Z" fill="#e36b6b"/></g><g transform="translate(78 50)"><circle cx="0" cy="0" r="11" fill="#f6cda6"/><path d="M-11 -1 a11 11 0 0 1 22 0 Z" fill="#3a2a1a"/><circle cx="-3.5" cy="1" r="1.4" fill="#3a2a1a"/><circle cx="3.5" cy="1" r="1.4" fill="#3a2a1a"/><path d="M-3 6 q3 2.5 6 0" stroke="#b06a3c" stroke-width="1.3" fill="none" stroke-linecap="round"/><path d="M-9 12 q9 -6 18 0 V36 H-9 Z" fill="#5b8fd1"/></g></svg>';
+
+const FOTO_CASA = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img"><title>Foto della casa</title><rect width="120" height="120" fill="#d7ecff"/><rect x="0" y="84" width="120" height="36" fill="#bfe0a8"/><rect x="26" y="52" width="68" height="44" fill="#f0e3cf"/><path d="M20 52 L60 24 L100 52 Z" fill="#c0563f"/><rect x="52" y="70" width="16" height="26" fill="#8a5a36"/><rect x="34" y="60" width="13" height="13" fill="#9fd0ef" stroke="#fff" stroke-width="2"/><rect x="73" y="60" width="13" height="13" fill="#9fd0ef" stroke="#fff" stroke-width="2"/><rect x="0" y="96" width="120" height="4" fill="#a9cf8e"/></svg>';
+
+const FOTO_GEO = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img"><title>Posizione sui post</title><rect width="120" height="120" fill="#e3edf7"/><g stroke="#cdd9ea" stroke-width="9" fill="none"><path d="M0 72H120"/><path d="M52 0V120"/></g><g stroke="#fff" stroke-width="4" fill="none"><path d="M0 72H120"/><path d="M52 0V120"/></g><rect x="14" y="22" width="22" height="20" rx="2" fill="#dfe5e8"/><rect x="78" y="84" width="24" height="22" rx="2" fill="#dfe5e8"/><path d="M60 66 C48 52 48 38 60 38 C72 38 72 52 60 66 Z" fill="#123E90"/><circle cx="60" cy="48" r="5" fill="#fff"/></svg>';
+
+const CLUES = [
+  { svg:FOTO_SPIAGGIA, src:'Post: "Finalmente al mare!"', rev:'Annuncia che la famiglia &egrave; partita: la casa resta vuota per giorni.', tag:'Casa vuota' },
+  { svg:FOTO_GEO, src:'Posizione e tag del luogo', rev:'La posizione sui post indica con precisione il quartiere dove abitano.', tag:'Dove abitano' },
+  { svg:FOTO_BIMBI, src:'Foto dei bambini a scuola', rev:'Mostra et&agrave;, scuola e gli orari di entrata e uscita: la casa si svuota.', tag:'Orari fissi' },
+  { svg:FOTO_CASA, src:'Foto della casa e del salotto', rev:'Si vedono ingresso, finestre e oggetti di valore all\'interno.', tag:'Cosa c\'&egrave; dentro' }
+];
+
+const SETTIMANA = [
+  {d:'Lun',empty:true},{d:'Mar',empty:true},{d:'Mer',empty:true},
+  {d:'Gio',empty:true},{d:'Ven',empty:true},{d:'Sab',empty:false},{d:'Dom',empty:false}
+];
+
+const DIFESE = [
+  'Pubblica le foto delle vacanze <b>al ritorno</b>, mai mentre sei via.',
+  'Togli la <b>posizione</b> dai post e disattiva i tag automatici del luogo.',
+  'Non mostrare mai <b>documenti</b> (CIE, patente, tessere) nelle foto.',
+  'Evita di far vedere <b>oggetti di valore</b> e l\'interno di casa.',
+  'Tieni il profilo <b>privato</b>: scegli tu chi pu&ograve; vedere i post.',
+  'Non condividere <b>orari fissi</b> di scuola, palestra o lavoro.'
+];
+
+function fig(svg){ return svg.replace('<svg ', '<svg class="fig-svg" '); }
+
+(function buildImpronta(){
+  var grid=document.getElementById('osint-grid');
+  if(!grid) return;
+  CLUES.forEach(function(c){
+    var el=document.createElement('div');
+    el.className='clue';
+    el.innerHTML='<span class="thumb">'+c.svg+'</span>'+
+      '<div class="ct"><div class="src"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>'+c.src+'</div>'+
+      '<div class="rev">'+c.rev+'</div><span class="tag">'+c.tag+'</span></div>';
+    grid.appendChild(el);
+  });
+  document.getElementById('osint-map').innerHTML=fig(ASSET_MAP)+
+    '<figcaption><b>Mappa ricostruita.</b> Casa, scuola e palestra individuate incrociando foto e posizioni pubbliche.</figcaption>';
+  document.getElementById('osint-cie').innerHTML=fig(ASSET_CIE)+
+    '<figcaption><b>Documento esposto.</b> Un selfie con la CIE del nonno regala nome, data di nascita e Comune a chiunque.</figcaption>';
+  var week=document.getElementById('osint-week');
+  SETTIMANA.forEach(function(g){
+    var d=document.createElement('div');
+    d.className='day '+(g.empty?'empty':'home');
+    d.innerHTML='<span class="dn">'+g.d+'</span>'+(g.empty?'vuota':'in casa');
+    week.appendChild(d);
+  });
+  var def=document.getElementById('osint-defend');
+  DIFESE.forEach(function(t){
+    var li=document.createElement('li');
+    li.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>'+t+'</span>';
+    def.appendChild(li);
+  });
+})();
+
 function scegliAzione(i,j){
   const s=TRAPPOLE[i], a=s.azioni[j], card=document.getElementById('tc-'+i), btn=document.getElementById('act-'+i+'-'+j);
   if(card.classList.contains('solved')) return;
