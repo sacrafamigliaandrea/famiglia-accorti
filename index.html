@@ -197,7 +197,17 @@ main{padding:26px 0 80px}
 @media(max-width:720px){.train{grid-template-columns:1fr}}
 
 /* ===== IMPRONTA DIGITALE (OSINT) ===== */
-.osint-intro{background:var(--goldL);border:1.5px solid var(--gold);border-radius:14px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start;margin-bottom:22px}
+.osint-intro{background:var(--goldL);border:1.5px solid var(--gold);border-radius:14px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start;margin-bottom:26px}
+.osint-step{display:flex;align-items:center;gap:13px;margin:38px 0 16px;padding-top:22px;border-top:2px dashed var(--brd2)}
+.osint-step:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.osint-step .sn{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--head);font-weight:700;font-size:1.15rem;display:inline-flex;align-items:center;justify-content:center}
+.osint-step .stx h2{font-family:var(--head);font-size:1.2rem;margin:0;color:var(--blueD);line-height:1.15}
+.osint-step .stx small{display:block;color:var(--muted);font-size:.9rem;margin-top:2px}
+.osint-step.defend-step .sn{background:var(--ok)}
+.osint-step.defend-step .stx h2{color:var(--ok)}
+.src-note{display:inline-block;margin-left:4px;font-size:.74rem;font-family:var(--head);font-weight:600;color:var(--gold);background:var(--goldL);border:1px solid var(--gold);border-radius:999px;padding:1px 7px;vertical-align:1px}
+.pacco-fig{margin-top:14px}
+.pacco-fig .fig-svg{max-height:230px}
 .osint-intro svg{flex:0 0 auto;margin-top:2px}
 .osint-intro b{color:var(--blueD)}
 .dossier{background:#fff;border:1.5px solid var(--brd);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:24px}
@@ -224,8 +234,11 @@ main{padding:26px 0 80px}
 .profile-card{border:1.5px solid var(--brd2);border-radius:12px;background:#fff;overflow:hidden}
 .profile-card .pc-h{background:var(--blueL);padding:11px 14px;font-family:var(--head);font-weight:700;color:var(--blueD);font-size:.95rem;display:flex;align-items:center;gap:8px}
 .profile-card dl{margin:0;padding:6px 14px 12px}
-.profile-card dt{font-family:var(--head);font-size:.72rem;font-weight:600;color:var(--light);text-transform:uppercase;letter-spacing:.5px;margin-top:9px}
-.profile-card dd{font-size:.97rem;color:var(--text);margin:1px 0 0}
+.profile-card dl.pc-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 26px;padding:12px 16px 16px}
+.profile-card .pc-grid>div{min-width:0;padding:5px 0;border-bottom:1px solid var(--brd)}
+.profile-card dt{font-family:var(--head);font-size:.72rem;font-weight:600;color:var(--light);text-transform:uppercase;letter-spacing:.5px;margin-top:0}
+.profile-card dd{font-size:.97rem;color:var(--text);margin:2px 0 0;line-height:1.4}
+.osint-2col .routine,.osint-2col .heist{margin-top:0}
 .routine{margin-top:18px;border:1.5px solid var(--brd);border-radius:12px;background:#fbfcfe;padding:14px 16px}
 .routine h3{font-size:1rem;margin-bottom:10px;display:flex;align-items:center;gap:9px}
 .week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
@@ -247,7 +260,7 @@ main{padding:26px 0 80px}
 .defend li{display:flex;gap:10px;align-items:flex-start;font-size:.96rem;line-height:1.45}
 .defend li svg{flex:0 0 auto;margin-top:3px;color:var(--ok)}
 .defend li b{color:var(--blueD)}
-@media(max-width:760px){.osint-2col{grid-template-columns:1fr}.defend ul{grid-template-columns:1fr}.week{grid-template-columns:repeat(7,1fr)}}
+@media(max-width:760px){.osint-2col{grid-template-columns:1fr}.defend ul{grid-template-columns:1fr}.week{grid-template-columns:repeat(7,1fr)}.profile-card dl.pc-grid{grid-template-columns:1fr}}
 
 .card{background:#fff;border:1.5px solid var(--brd);border-radius:14px;box-shadow:var(--shadow);padding:18px}
 .card h3{font-size:1.1rem;margin-bottom:10px;display:flex;align-items:center;gap:9px}
@@ -570,7 +583,11 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 20px 4
       <div><b>Esercizio di consapevolezza.</b> Tutti i dati qui sotto sono ricostruiti dai contenuti che la famiglia mostra nel video. Un estraneo, con pazienza e gli stessi indizi pubblici, può arrivare alle stesse conclusioni. Questo si chiama <b>OSINT</b>: raccogliere informazioni da fonti aperte.</div>
     </div>
 
-    <!-- DOSSIER: gli indizi raccolti -->
+    <!-- ===== FASE 1: GLI INDIZI ===== -->
+    <div class="osint-step">
+      <span class="sn">1</span>
+      <div class="stx"><h2>Gli indizi raccolti online</h2><small>Foto, post pubblici e persino la spazzatura davanti a casa.</small></div>
+    </div>
     <div class="dossier">
       <div class="dossier-h">
         <span class="dh-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h6l2 2h8v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg></span>
@@ -579,56 +596,75 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 20px 4
       </div>
       <div class="dossier-b">
         <div class="osint-grid" id="osint-grid"></div>
+        <figure class="figure pacco-fig" id="osint-pacco"></figure>
       </div>
     </div>
 
-    <!-- MAPPA + PROFILO -->
+    <!-- ===== FASE 2: IL PROFILO ===== -->
+    <div class="osint-step">
+      <span class="sn">2</span>
+      <div class="stx"><h2>Il profilo della famiglia</h2><small>Nomi, et&agrave;, lavoro e contatti, ricostruiti pezzo per pezzo.</small></div>
+    </div>
+    <div class="profile-card">
+      <div class="pc-h">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9.5" r="2.6"/><path d="M3 20c0-3.3 3-5 6-5s6 1.7 6 5M14.5 20c.2-2.4 1.9-3.6 4-3.6 1.4 0 3 .7 3.5 2.4"/></svg>
+        Profilo ricostruito
+      </div>
+      <dl class="pc-grid">
+        <div><dt>Il nonno</dt><dd><b>Paolo Accorti</b>, 75 anni &mdash; nato il 14.03.1951 a Roma <span class="src-note">dalla CIE</span></dd></div>
+        <div><dt>Il padre</dt><dd><b>Marco Accorti</b>, 47 anni &mdash; geometra in uno studio tecnico della zona <span class="src-note">dal pacco + LinkedIn</span></dd></div>
+        <div><dt>La madre</dt><dd><b>Giulia Accorti</b>, 44 anni &mdash; infermiera, turni in ospedale <span class="src-note">dai post</span></dd></div>
+        <div><dt>I figli</dt><dd><b>Sofia</b> (9) e <b>Leonardo</b> (7) &mdash; scuola primaria Sacra Famiglia <span class="src-note">dalle foto</span></dd></div>
+        <div><dt>Indirizzo esatto</dt><dd>Via Tuscolana 218, int. 6 &mdash; 00181 Roma (RM) <span class="src-note">dal cartone</span></dd></div>
+        <div><dt>Telefono</dt><dd>+39 333 412 87 90 <span class="src-note">stampato sull'etichetta</span></dd></div>
+        <div><dt>Documento esposto</dt><dd>Carta d'Identit&agrave; Elettronica del nonno, inquadrata in un selfie.</dd></div>
+        <div><dt>Valore in casa</dt><dd>TV nuova, console di gioco e gioielli visibili nelle foto.</dd></div>
+      </dl>
+    </div>
+
+    <!-- ===== FASE 3: DOVE E QUANDO ===== -->
+    <div class="osint-step">
+      <span class="sn">3</span>
+      <div class="stx"><h2>Dove abitano e quando la casa &egrave; vuota</h2><small>Mappa del quartiere e orari fissi della settimana.</small></div>
+    </div>
     <div class="osint-2col">
       <figure class="figure" id="osint-map"></figure>
-      <div>
-        <div class="profile-card">
-          <div class="pc-h">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
-            Profilo ricostruito
-          </div>
-          <dl>
-            <dt>Nucleo familiare</dt><dd>Paolo (nonno, 75 anni), i figli e due bambini in et&agrave; scolare.</dd>
-            <dt>Indirizzo probabile</dt><dd>Quartiere tra Via Appia e Via Tuscolana &mdash; Roma (zona Tuscolano).</dd>
-            <dt>Documenti esposti</dt><dd>Carta d'Identit&agrave; Elettronica del nonno inquadrata in un post.</dd>
-            <dt>Abitudini</dt><dd>Scuola al mattino, palestra il pomeriggio, vacanza al mare in corso.</dd>
-            <dt>Valore in casa</dt><dd>Foto con TV nuova, console di gioco, gioielli in vista.</dd>
-          </dl>
-        </div>
-        <div class="routine">
-          <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Quando la casa &egrave; vuota</h3>
-          <div class="week" id="osint-week"></div>
-          <div class="week-leg">
-            <span><span class="lg-dot" style="background:var(--goldL);border:1.5px solid var(--gold)"></span> Casa probabilmente vuota</span>
-            <span><span class="lg-dot" style="background:var(--okL);border:1.5px solid var(--ok)"></span> Famiglia in casa</span>
-          </div>
+      <div class="routine">
+        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Quando la casa &egrave; vuota</h3>
+        <div class="week" id="osint-week"></div>
+        <div class="week-leg">
+          <span><span class="lg-dot" style="background:var(--goldL);border:1.5px solid var(--gold)"></span> Casa probabilmente vuota</span>
+          <span><span class="lg-dot" style="background:var(--okL);border:1.5px solid var(--ok)"></span> Famiglia in casa</span>
         </div>
       </div>
     </div>
 
-    <!-- CIE + PIANO -->
-    <div class="osint-2col" style="margin-top:18px">
+    <!-- ===== FASE 4: IL DOCUMENTO ===== -->
+    <div class="osint-step">
+      <span class="sn">4</span>
+      <div class="stx"><h2>Il documento del nonno</h2><small>Una CIE in un selfie vale un furto d'identit&agrave;.</small></div>
+    </div>
+    <div class="osint-2col">
       <figure class="figure" id="osint-cie"></figure>
       <div class="heist">
         <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6Z"/><path d="M9 12l2 2 4-4"/></svg> Come un ladro userebbe questi dati</h3>
         <ol>
-          <li><b>Trova la casa:</b> incrocia foto, posizione e nome del quartiere.</li>
+          <li><b>Trova la casa:</b> indirizzo esatto e numero dal cartone del pacco.</li>
           <li><b>Sceglie il momento:</b> il post "partiti per il mare" dice che la casa &egrave; vuota.</li>
           <li><b>Conosce gli orari:</b> scuola e palestra svuotano la casa a ore fisse.</li>
-          <li><b>Ruba l'identit&agrave;:</b> con i dati della CIE pu&ograve; aprire truffe a nome del nonno.</li>
-          <li><b>Colpisce:</b> sa cosa c'&egrave; di valore e quando nessuno c'&egrave;.</li>
+          <li><b>Ruba l'identit&agrave;:</b> con i dati della CIE apre truffe a nome del nonno.</li>
+          <li><b>Chiama col numero giusto:</b> con voce clonata dall'IA finge di essere un familiare.</li>
         </ol>
       </div>
     </div>
 
-    <!-- DIFESA: spezzare la mappa -->
+    <!-- ===== FASE 5: DIFESA ===== -->
+    <div class="osint-step defend-step">
+      <span class="sn">5</span>
+      <div class="stx"><h2>Come spezzare la mappa</h2><small>Ogni indizio si pu&ograve; togliere: ecco le abitudini che difendono.</small></div>
+    </div>
     <div class="defend">
-      <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6Z"/></svg> Come spezzare la mappa</h2>
-      <p>Ogni indizio si pu&ograve; togliere. Bastano piccole abitudini per rendere il quadro impossibile da ricostruire.</p>
+      <p>Bastano piccole scelte per rendere il quadro impossibile da ricostruire.</p>
       <ul id="osint-defend"></ul>
     </div>
   </section>
@@ -1174,6 +1210,19 @@ const TRAPPOLE = [
     lez:{ titolo:'Truffa del finto carabiniere', msg:'Tranello! Era un truffatore: i Carabinieri non chiedono soldi o contanti al telefono.',
       seg:['Le forze dell\'ordine non chiedono denaro per telefono.','La paura e la fretta servono a non farti ragionare.','Si verifica sempre richiamando il 112 o il familiare.'] },
     ok:'Giusto: si riaggancia e si verifica chiamando il 112 o il parente.'
+  },
+  {
+    skin:'call', canale:'Telefonata', contesto:'Chiamata da un numero estero che non conosci',
+    callName:'+40 768 22 41 90', callSub:'CHIAMATA IN ARRIVO', callNum:'Numero estero &middot; Romania',
+    said:'(voce un po\' meccanica) "Mamma sono io, ho perso il telefono e ti chiamo da un altro numero. Mi serve subito un bonifico, ti detto l\'IBAN&hellip;"',
+    azioni:[
+      {t:'Faccio subito il bonifico all\'IBAN che mi detta', esito:'trap'},
+      {t:'Richiamo su questo numero per sentire se &egrave; lui', esito:'trap'},
+      {t:'Riaggancio e chiamo mio figlio sul suo numero vero', esito:'safe'}
+    ],
+    lez:{ titolo:'Voce clonata con l\'IA (finto familiare)', msg:'Tranello! Una voce creata con l\'intelligenza artificiale pu&ograve; imitare un familiare per farti pagare di corsa.',
+      seg:['L\'IA oggi clona una voce da pochi secondi di audio presi dai social.','Numero estero e voce &laquo;strana&raquo; sono campanelli d\'allarme.','Si verifica sempre richiamando la persona sul suo numero conosciuto.'] },
+    ok:'Esatto: si riaggancia e si richiama la persona sul suo numero vero.'
   }
 ];
 let trappoleRisolte=0;
@@ -1298,6 +1347,25 @@ const FOTO_CASA = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"
 
 const FOTO_GEO = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img"><title>Posizione sui post</title><rect width="120" height="120" fill="#e3edf7"/><g stroke="#cdd9ea" stroke-width="9" fill="none"><path d="M0 72H120"/><path d="M52 0V120"/></g><g stroke="#fff" stroke-width="4" fill="none"><path d="M0 72H120"/><path d="M52 0V120"/></g><rect x="14" y="22" width="22" height="20" rx="2" fill="#dfe5e8"/><rect x="78" y="84" width="24" height="22" rx="2" fill="#dfe5e8"/><path d="M60 66 C48 52 48 38 60 38 C72 38 72 52 60 66 Z" fill="#123E90"/><circle cx="60" cy="48" r="5" fill="#fff"/></svg>';
 
+const ASSET_PACCO = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190" role="img" font-family="Atkinson Hyperlegible, system-ui, sans-serif">'+
+  '<title>Etichetta di spedizione su un cartone gettato nella spazzatura</title>'+
+  '<rect width="300" height="190" fill="#c49a63"/>'+
+  '<g stroke="#a9824f" stroke-width="2" opacity="0.55"><path d="M0 158H300"/><path d="M150 158V190"/></g>'+
+  '<rect x="0" y="150" width="300" height="40" fill="#b88e57"/>'+
+  '<rect x="0" y="64" width="300" height="22" fill="#e6d6a8" opacity="0.5"/>'+
+  '<rect x="24" y="22" width="252" height="120" rx="6" fill="#ffffff"/>'+
+  '<path d="M24 28a6 6 0 0 1 6-6h240a6 6 0 0 1 6 6v18H24Z" fill="#123E90"/>'+
+  '<text x="36" y="40" font-size="11" fill="#fff" font-weight="700" font-family="Lexend,sans-serif" letter-spacing="0.5">CORRIERE EXPRESS</text>'+
+  '<text x="264" y="40" font-size="8.5" fill="#cfe0ff" text-anchor="end">CONSEGNATO</text>'+
+  '<text x="38" y="66" font-size="8" fill="#9aa0ab" letter-spacing="1.5">DESTINATARIO</text>'+
+  '<text x="38" y="82" font-size="13" fill="#1b2540" font-weight="700">Marco Accorti</text>'+
+  '<text x="38" y="98" font-size="10.5" fill="#3a445c">Via Tuscolana 218 &mdash; int. 6</text>'+
+  '<text x="38" y="112" font-size="10.5" fill="#3a445c">00181 Roma (RM)</text>'+
+  '<text x="38" y="131" font-size="11.5" fill="#1b2540" font-weight="700">Tel. +39 333 412 87 90</text>'+
+  '<g fill="#1b2540"><rect x="196" y="58" width="2" height="42"/><rect x="200" y="58" width="1" height="42"/><rect x="203" y="58" width="3" height="42"/><rect x="208" y="58" width="1" height="42"/><rect x="211" y="58" width="2" height="42"/><rect x="215" y="58" width="3" height="42"/><rect x="220" y="58" width="1" height="42"/><rect x="223" y="58" width="2" height="42"/><rect x="227" y="58" width="1" height="42"/><rect x="230" y="58" width="3" height="42"/><rect x="235" y="58" width="2" height="42"/><rect x="239" y="58" width="1" height="42"/><rect x="242" y="58" width="3" height="42"/><rect x="247" y="58" width="1" height="42"/><rect x="250" y="58" width="2" height="42"/><rect x="254" y="58" width="3" height="42"/><rect x="259" y="58" width="1" height="42"/><rect x="262" y="58" width="2" height="42"/></g>'+
+  '<text x="263" y="112" font-size="7" fill="#7a8294" text-anchor="end" font-family="monospace">IT 8842 109 77</text>'+
+  '</svg>';
+
 const CLUES = [
   { svg:FOTO_SPIAGGIA, src:'Post: "Finalmente al mare!"', rev:'Annuncia che la famiglia &egrave; partita: la casa resta vuota per giorni.', tag:'Casa vuota' },
   { svg:FOTO_GEO, src:'Posizione e tag del luogo', rev:'La posizione sui post indica con precisione il quartiere dove abitano.', tag:'Dove abitano' },
@@ -1316,7 +1384,9 @@ const DIFESE = [
   'Non mostrare mai <b>documenti</b> (CIE, patente, tessere) nelle foto.',
   'Evita di far vedere <b>oggetti di valore</b> e l\'interno di casa.',
   'Tieni il profilo <b>privato</b>: scegli tu chi pu&ograve; vedere i post.',
-  'Non condividere <b>orari fissi</b> di scuola, palestra o lavoro.'
+  'Non condividere <b>orari fissi</b> di scuola, palestra o lavoro.',
+  'Strappa o annerisci le <b>etichette</b> dei pacchi prima di buttarli.',
+  'Voce che chiede soldi di fretta? <b>Riaggancia e richiama</b> il numero vero: l\'IA imita le voci.'
 ];
 
 function fig(svg){ return svg.replace('<svg ', '<svg class="fig-svg" '); }
@@ -1334,6 +1404,8 @@ function fig(svg){ return svg.replace('<svg ', '<svg class="fig-svg" '); }
   });
   document.getElementById('osint-map').innerHTML=fig(ASSET_MAP)+
     '<figcaption><b>Mappa ricostruita.</b> Casa, scuola e palestra individuate incrociando foto e posizioni pubbliche.</figcaption>';
+  document.getElementById('osint-pacco').innerHTML=fig(ASSET_PACCO)+
+    '<figcaption><b>Etichetta non strappata.</b> Un cartone buttato nella differenziata regala nome completo, indirizzo esatto e numero di telefono.</figcaption>';
   document.getElementById('osint-cie').innerHTML=fig(ASSET_CIE)+
     '<figcaption><b>Documento esposto.</b> Un selfie con la CIE del nonno regala nome, data di nascita e Comune a chiunque.</figcaption>';
   var week=document.getElementById('osint-week');
