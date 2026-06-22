@@ -29,12 +29,13 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.25;color:var(--blueD)}
 
 /* TOPBAR */
 header.top{background:var(--card);border-bottom:2px solid var(--brd);box-shadow:var(--shadow);position:sticky;top:0;z-index:50}
-.top-in{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:12px 20px;max-width:var(--maxw);margin:0 auto}
+.top-in{display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:12px 20px;max-width:var(--maxw);margin:0 auto}
+.top-row2{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:12px}
 .brand img{height:48px;width:auto;border-radius:6px}
 .brand .t{font-family:var(--head);font-weight:700;color:var(--blue);font-size:1.05rem;line-height:1.15}
 .brand .t small{display:block;font-weight:400;color:var(--muted);font-size:.78rem}
-nav.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+nav.tabs{display:flex;gap:8px;flex-wrap:wrap}
 .tab{font-family:var(--head);font-weight:500;font-size:.95rem;color:var(--blue);background:var(--blueL);
   border:1.5px solid transparent;border-radius:999px;padding:10px 16px;min-height:44px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:.15s}
 .tab:hover{background:var(--warm)}
@@ -42,7 +43,7 @@ nav.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
 .tab .n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;
   background:rgba(255,255,255,.25);font-size:.8rem;font-weight:700}
 .tab:not(.active) .n{background:var(--blue);color:#fff}
-.btn-info{font-family:var(--head);font-weight:500;font-size:.9rem;color:var(--gold);background:var(--goldL);
+.btn-info{font-family:var(--head);font-weight:500;font-size:.9rem;color:var(--gold);background:var(--goldL);margin-left:auto;
   border:1.5px solid var(--gold);border-radius:999px;padding:9px 14px;min-height:44px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
 .btn-info:hover{background:var(--gold);color:#fff}
 
@@ -152,6 +153,31 @@ main{padding:26px 0 80px}
 .qr-box{background:#fff;border-radius:8px;padding:9px;width:118px;margin:0 auto}
 .qr-box svg{width:100%;height:auto;display:block}
 .qr-poster .pay{font-size:.7rem;opacity:.92;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:5px}
+/* SMS (iMessage) */
+.sms-h{background:#f6f6f8;border-bottom:1px solid #e2e2e6;text-align:center;padding:8px 10px;font-family:var(--head);font-weight:600;font-size:.8rem;color:#1b2540}
+.sms-h small{display:block;font-weight:400;font-size:.6rem;color:#8a8a90;margin-top:1px}
+.sms-b{background:#fff;padding:10px 10px 14px;display:flex;flex-direction:column;gap:7px;min-height:150px}
+.sms-time{text-align:center;font-size:.57rem;color:#9a9aa0;margin:1px 0 4px}
+.sms-msg{max-width:82%;align-self:flex-start;background:#e9e9eb;color:#111;border-radius:15px;padding:7px 11px;font-size:.77rem;line-height:1.38;word-break:break-word}
+/* Email */
+.eml-h{padding:10px 12px;border-bottom:1px solid #eee}
+.eml-subj{font-family:var(--head);font-weight:700;font-size:.83rem;color:#1b2540;line-height:1.2;margin-bottom:7px}
+.eml-from{display:flex;align-items:center;gap:8px;font-size:.66rem;color:#7a869a;line-height:1.3}
+.eml-av{width:26px;height:26px;border-radius:50%;background:#123E90;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:700;font-size:.66rem;color:#fff}
+.eml-from b{color:#1b2540;font-weight:600}
+.eml-b{padding:11px 12px 14px;font-size:.77rem;line-height:1.5;color:#1b2540;min-height:110px}
+.eml-btn{display:inline-block;margin-top:11px;background:#123E90;color:#fff;font-family:var(--head);font-weight:600;font-size:.72rem;border-radius:7px;padding:8px 14px}
+/* Telefonata (vishing) */
+.call-scr{background:linear-gradient(#222b3d,#0e1422);color:#fff;min-height:240px;display:flex;flex-direction:column;align-items:center;padding:20px 14px 16px}
+.call-sub{font-size:.72rem;opacity:.78;letter-spacing:.5px}
+.call-av{width:60px;height:60px;border-radius:50%;background:#33415c;margin:12px 0 10px;display:flex;align-items:center;justify-content:center}
+.call-name{font-family:var(--head);font-weight:700;font-size:1rem}
+.call-num{font-size:.65rem;opacity:.6;margin-top:3px}
+.call-said{margin-top:13px;font-size:.71rem;line-height:1.42;color:#e6ebf5;background:rgba(255,255,255,.08);border-radius:10px;padding:9px 11px;font-style:italic;text-align:center}
+.call-actions{display:flex;gap:46px;margin-top:18px}
+.call-btn{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.call-acc{background:#1fab54}
+.call-dec{background:#e23b3b}
 .tcard .acts{padding:0 16px 16px;display:flex;flex-direction:column;gap:9px}
 .act{font-family:var(--body);font-size:.97rem;text-align:left;background:#fff;border:1.5px solid var(--brd2);
   border-radius:10px;padding:11px 14px;min-height:44px;cursor:pointer;color:var(--text);transition:border-color .15s,background .15s}
@@ -368,18 +394,20 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 20px 4
       <img src="logo.jpg" alt="Scuola Sacra Famiglia" onerror="this.style.display='none'">
       <div class="t">La Famiglia Accorti<small>Verifica di Cittadinanza Digitale</small></div>
     </div>
-    <nav class="tabs" id="tabs">
-      <button class="tab active" data-sec="preambolo"><span class="n">1</span>Preambolo</button>
-      <button class="tab" data-sec="visione"><span class="n">2</span>Visione attiva</button>
-      <button class="tab" data-sec="allenamento"><span class="n">3</span>Allenamento</button>
-      <button class="tab" data-sec="impronta"><span class="n">4</span>Impronta digitale</button>
-      <button class="tab" data-sec="verifica"><span class="n">5</span>Verifica</button>
-      <button class="tab" data-sec="meta"><span class="n">6</span>Riflessione</button>
-    </nav>
-    <button class="btn-info" onclick="openInfo()">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><circle cx="12" cy="7.5" r=".6" fill="currentColor"/></svg>
-      Info Docenti
-    </button>
+    <div class="top-row2">
+      <nav class="tabs" id="tabs">
+        <button class="tab active" data-sec="preambolo"><span class="n">1</span>Preambolo</button>
+        <button class="tab" data-sec="visione"><span class="n">2</span>Visione attiva</button>
+        <button class="tab" data-sec="allenamento"><span class="n">3</span>Allenamento</button>
+        <button class="tab" data-sec="impronta"><span class="n">4</span>Impronta digitale</button>
+        <button class="tab" data-sec="verifica"><span class="n">5</span>Verifica</button>
+        <button class="tab" data-sec="meta"><span class="n">6</span>Riflessione</button>
+      </nav>
+      <button class="btn-info" onclick="openInfo()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><circle cx="12" cy="7.5" r=".6" fill="currentColor"/></svg>
+        Info Docenti
+      </button>
+    </div>
   </div>
 </header>
 
@@ -565,7 +593,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 20px 4
           </div>
           <dl>
             <dt>Nucleo familiare</dt><dd>Paolo (nonno, 75 anni), i figli e due bambini in et&agrave; scolare.</dd>
-            <dt>Indirizzo probabile</dt><dd>Quartiere vicino a Via Roma / Via Verdi &mdash; Orzinuovi (BS).</dd>
+            <dt>Indirizzo probabile</dt><dd>Quartiere tra Via Appia e Via Tuscolana &mdash; Roma (zona Tuscolano).</dd>
             <dt>Documenti esposti</dt><dd>Carta d'Identit&agrave; Elettronica del nonno inquadrata in un post.</dd>
             <dt>Abitudini</dt><dd>Scuola al mattino, palestra il pomeriggio, vacanza al mare in corso.</dd>
             <dt>Valore in casa</dt><dd>Foto con TV nuova, console di gioco, gioielli in vista.</dd>
@@ -1029,6 +1057,123 @@ const TRAPPOLE = [
     lez:{ titolo:'Quishing: la truffa del QR code', msg:'Tranello! Quel QR portava a un sito falso che copiava i dati della tua carta.',
       seg:['Un QR su un volantino può portare ovunque.','Non vedi l\'indirizzo prima di inquadrarlo.','"Scade tra 10 min" &egrave; la solita fretta.'] },
     ok:'Giusto: per pagare si usano i canali ufficiali, non un QR trovato in giro.'
+  },
+  {
+    skin:'wa', canale:'WhatsApp', contesto:'Messaggio da un contatto che conosci',
+    head:{ name:'Luca (compagno)', sub:'online' },
+    msgs:[
+      { t:'Ciao! Scusa il disturbo, ho un problemino.', time:'17:04' },
+      { t:'Ti &egrave; arrivato per sbaglio un SMS con un codice a 6 cifre? &Egrave; mio, me lo rigiri qui?', time:'17:05' }
+    ],
+    azioni:[
+      {t:'Gli rigiro il codice che ho ricevuto', esito:'trap'},
+      {t:'Glielo mando, &egrave; un amico fidato', esito:'trap'},
+      {t:'Non giro il codice: chiamo Luca per capire', esito:'safe'}
+    ],
+    lez:{ titolo:'Furto dell\'account con il codice OTP', msg:'Tranello! L\'account di Luca era stato rubato e quel codice serviva a rubare anche il tuo.',
+      seg:['Il codice a 6 cifre &egrave; la chiave del TUO account.','Nessun amico ha davvero bisogno del tuo codice.','Chi scrive potrebbe avere l\'account gi&agrave; violato.'] },
+    ok:'Giusto: il codice di verifica non si gira MAI a nessuno, nemmeno agli amici.'
+  },
+  {
+    skin:'ig', canale:'Instagram', contesto:'Messaggio diretto (DM) ricevuto sul profilo',
+    msgs:[
+      { name:'ikea_regali_official', verif:true, t:'Complimenti! Il tuo profilo &egrave; stato estratto: hai vinto un buono IKEA da 500&euro;.' },
+      { name:'ikea_regali_official', verif:true, t:'Ritira qui inserendo i tuoi dati: ikea-premi.online/vinci' }
+    ],
+    azioni:[
+      {t:'Inserisco i miei dati per ritirare il buono', esito:'trap'},
+      {t:'Pago i 2&euro; di "spese di spedizione" del premio', esito:'trap'},
+      {t:'Lo ignoro: i concorsi veri non funzionano cos&igrave;', esito:'safe'}
+    ],
+    lez:{ titolo:'Finto premio in DM', msg:'Tranello! Nessun buono: volevano i tuoi dati e i soldi delle finte spese.',
+      seg:['Non hai partecipato a nessun concorso.','Un premio vero non chiede di pagare "spese".','Il profilo imita un marchio ma non &egrave; quello ufficiale.'] },
+    ok:'Giusto: se non hai partecipato, non puoi aver vinto.'
+  },
+  {
+    skin:'yt', canale:'YouTube', contesto:'Diretta sponsorizzata che compare nei suggeriti',
+    thumb:'RADDOPPIA i tuoi euro in 24h!',
+    title:'LIVE: investimento garantito &mdash; invii 100&euro;, ne ricevi 200',
+    channel:'Crypto Italia Ufficiale &middot; in diretta',
+    desc:'Invia i tuoi euro all\'indirizzo in chat e ricevi il doppio. Solo per i primi 500: <b>crypto-raddoppio.online</b>',
+    azioni:[
+      {t:'Invio 100&euro; per riceverne 200', esito:'trap'},
+      {t:'Mando i miei dati per partecipare', esito:'trap'},
+      {t:'Chiudo: un guadagno "garantito" &egrave; una truffa', esito:'safe'}
+    ],
+    lez:{ titolo:'Truffa dell\'investimento', msg:'Tranello! I soldi inviati spariscono: nessuno raddoppia davvero il tuo denaro.',
+      seg:['Nessun investimento serio &egrave; "garantito".','"Solo per i primi 500" crea fretta.','Spesso usano nomi e volti di personaggi famosi falsi.'] },
+    ok:'Bravo: rendimenti sicuri e immediati non esistono.'
+  },
+  {
+    skin:'qr', canale:'QR code', contesto:'Foglio simile a una multa lasciato sul parabrezza',
+    poster:{ h5:'AVVISO DI SOSTA', sub:'Verbale da pagare entro 5 giorni', seed:19273,
+      pay:'Inquadra per saldare &middot; sconto del 30%' },
+    azioni:[
+      {t:'Inquadro e pago la multa con la carta', esito:'trap'},
+      {t:'Inserisco i dati della carta nel sito', esito:'trap'},
+      {t:'Verifico sul sito del Comune o della Polizia Locale', esito:'safe'}
+    ],
+    lez:{ titolo:'Quishing: la finta multa', msg:'Tranello! Non era un verbale vero: il QR portava a un sito che copiava la carta.',
+      seg:['Le multe vere non si pagano da un QR su un volantino.','Lo "sconto se paghi subito" serve a metterti fretta.','Non sai dove porta il QR finch&eacute; non lo inquadri.'] },
+    ok:'Giusto: un verbale si verifica solo sui canali ufficiali del Comune.'
+  },
+  {
+    skin:'sms', canale:'SMS', contesto:'SMS da un mittente sconosciuto',
+    head:{ name:'Info-Spedizioni', sub:'SMS' },
+    msgs:[
+      { t:'Il tuo pacco &egrave; in giacenza. Aggiorna le preferenze di consegna: spediz-tracking.online/it' }
+    ],
+    azioni:[
+      {t:'Apro il link e aggiorno l\'indirizzo', esito:'trap'},
+      {t:'Pago il piccolo supplemento richiesto', esito:'trap'},
+      {t:'Controllo solo sull\'app ufficiale del corriere', esito:'safe'}
+    ],
+    lez:{ titolo:'Smishing: il pacco in giacenza', msg:'Tranello! Non c\'era nessun pacco: volevano i dati della tua carta.',
+      seg:['Il link non &egrave; il sito del corriere: finisce in <i>.online</i>.','Spesso chiede un pagamento piccolo per abbassare la guardia.','Non aspettavi nessun pacco da quel mittente.'] },
+    ok:'Bravo: le spedizioni si controllano solo dall\'app o sito ufficiale.'
+  },
+  {
+    skin:'sms', canale:'SMS', contesto:'SMS che sembra della tua banca',
+    head:{ name:'BANCA-INFO', sub:'SMS' },
+    msgs:[
+      { t:'Gentile cliente, rilevato accesso anomalo. Blocca subito qui: banca-sicurezza.online oppure chiama lo 06 99 99 12.' }
+    ],
+    azioni:[
+      {t:'Apro il link e inserisco le mie credenziali', esito:'trap'},
+      {t:'Chiamo il numero indicato nel messaggio', esito:'trap'},
+      {t:'Uso solo l\'app ufficiale o il numero dietro la carta', esito:'safe'}
+    ],
+    lez:{ titolo:'Smishing bancario (e vishing)', msg:'Tranello! Il finto operatore voleva password e codici per svuotare il conto.',
+      seg:['La banca non manda link per "bloccare" il conto.','Il numero nel messaggio porta ai truffatori, non alla banca.','L\'indirizzo non &egrave; il sito ufficiale della banca.'] },
+    ok:'Esatto: si usano solo l\'app ufficiale e il numero stampato sulla carta.'
+  },
+  {
+    skin:'eml', canale:'Email', contesto:'Email arrivata nella casella di posta',
+    subj:'Rimborso fiscale di 312,40&euro; in attesa', avInit:'AE',
+    fromName:'Agenzia delle Entrate', fromAddr:'rimborsi@agenzia-entrate-rimborso.online',
+    body:'Gentile contribuente, le risulta un rimborso di <b>312,40&euro;</b>. Per riceverlo, confermi i dati della sua carta entro 48 ore.',
+    btn:'Richiedi il rimborso',
+    azioni:[
+      {t:'Clicco e inserisco i dati della carta', esito:'trap'},
+      {t:'Compilo il modulo per avere il rimborso', esito:'trap'},
+      {t:'Cestino la mail: l\'Agenzia non chiede dati cos&igrave;', esito:'safe'}
+    ],
+    lez:{ titolo:'Phishing del finto rimborso', msg:'Tranello! L\'Agenzia delle Entrate non chiede i dati della carta via email.',
+      seg:['L\'indirizzo del mittente non &egrave; ufficiale (finisce in <i>.online</i>).','Un rimborso non richiede i dati della tua carta.','La scadenza "48 ore" serve a non farti riflettere.'] },
+    ok:'Esatto: gli enti pubblici non chiedono dati di pagamento via email.'
+  },
+  {
+    skin:'call', canale:'Telefonata', contesto:'Chiamata in arrivo da un numero fisso',
+    callName:'Comando Carabinieri', callSub:'CHIAMATA IN ARRIVO', callNum:'+39 06 4821 90',
+    said:'"Sono il maresciallo. Suo nipote ha avuto un incidente: servono subito 2.000&euro; in contanti per evitare guai."',
+    azioni:[
+      {t:'Preparo i contanti come chiede il maresciallo', esito:'trap'},
+      {t:'Comunico i dati di casa e quando esco', esito:'trap'},
+      {t:'Riaggancio e chiamo il 112 e mio nipote', esito:'safe'}
+    ],
+    lez:{ titolo:'Truffa del finto carabiniere', msg:'Tranello! Era un truffatore: i Carabinieri non chiedono soldi o contanti al telefono.',
+      seg:['Le forze dell\'ordine non chiedono denaro per telefono.','La paura e la fretta servono a non farti ragionare.','Si verifica sempre richiamando il 112 o il familiare.'] },
+    ok:'Giusto: si riaggancia e si verifica chiamando il 112 o il parente.'
   }
 ];
 let trappoleRisolte=0;
@@ -1060,7 +1205,10 @@ function chIcon(skin){
     wa:'<path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5Z"/>',
     ig:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6"/>',
     yt:'<rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9.2 15 12l-5 2.8z"/>',
-    qr:'<rect x="3" y="3" width="6" height="6"/><rect x="15" y="3" width="6" height="6"/><rect x="3" y="15" width="6" height="6"/><path d="M15 15h3v3M21 15v6h-6"/>'
+    qr:'<rect x="3" y="3" width="6" height="6"/><rect x="15" y="3" width="6" height="6"/><rect x="3" y="15" width="6" height="6"/><path d="M15 15h3v3M21 15v6h-6"/>',
+    sms:'<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+    eml:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+    call:'<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/>'
   }[skin]||'';
   return '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+p+'</svg>';
 }
@@ -1102,6 +1250,23 @@ function renderMock(s){
   if(s.skin==='qr'){
     return top+'<div class="qr-wrap"><div class="qr-poster"><h5>'+s.poster.h5+'</h5><div class="sub">'+s.poster.sub+'</div><div class="qr-box">'+qrSVG(s.poster.seed)+'</div><div class="pay"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'+s.poster.pay+'</div></div></div></div></div>';
   }
+  if(s.skin==='sms'){
+    var sb='';
+    s.msgs.forEach(function(m){ sb+='<div class="sms-msg">'+m.t+'</div>'; });
+    return top+'<div class="sms-h">'+s.head.name+'<small>'+s.head.sub+'</small></div><div class="sms-b"><div class="sms-time">oggi 9:41</div>'+sb+'</div></div></div>';
+  }
+  if(s.skin==='eml'){
+    return top+'<div class="eml-h"><div class="eml-subj">'+s.subj+'</div><div class="eml-from"><span class="eml-av">'+s.avInit+'</span><div><b>'+s.fromName+'</b><br>'+s.fromAddr+'</div></div></div>'+
+      '<div class="eml-b">'+s.body+'<br><span class="eml-btn">'+s.btn+'</span></div></div></div>';
+  }
+  if(s.skin==='call'){
+    return top+'<div class="call-scr"><div class="call-sub">'+s.callSub+'</div>'+
+      '<div class="call-av"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#cfd8ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>'+
+      '<div class="call-name">'+s.callName+'</div><div class="call-num">'+s.callNum+'</div>'+
+      '<div class="call-said">'+s.said+'</div>'+
+      '<div class="call-actions"><span class="call-btn call-dec"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M21 15.5c-1.2 0-2.4-.2-3.5-.6a1 1 0 0 0-1 .2l-2.2 2.2a15 15 0 0 1-6.6-6.6l2.2-2.2a1 1 0 0 0 .2-1A11 11 0 0 1 9 4a1 1 0 0 0-1-1H4.5C4 3 3.5 3.5 3.5 4 3.5 13.6 10.4 20.5 20 20.5c.5 0 1-.5 1-1V16a1 1 0 0 0-1-.5z" transform="rotate(135 12 12)"/></svg></span>'+
+      '<span class="call-btn call-acc"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M21 15.5c-1.2 0-2.4-.2-3.5-.6a1 1 0 0 0-1 .2l-2.2 2.2a15 15 0 0 1-6.6-6.6l2.2-2.2a1 1 0 0 0 .2-1A11 11 0 0 1 9 4a1 1 0 0 0-1-1H4.5C4 3 3.5 3.5 3.5 4 3.5 13.6 10.4 20.5 20 20.5c.5 0 1-.5 1-1V16a1 1 0 0 0-1-.5z"/></svg></span></div></div></div></div>';
+  }
   return top+'</div></div>';
 }
 (function buildTraining(){
@@ -1121,9 +1286,9 @@ function renderMock(s){
 })();
 
 /* ===================== IMPRONTA DIGITALE (OSINT) ===================== */
-const ASSET_MAP = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" font-family="Atkinson Hyperlegible, system-ui, sans-serif"><title>Mappa del quartiere della Famiglia Accorti</title><rect width="400" height="280" fill="#e9eef1"/><path d="M270 150 q40 -30 90 -10 q20 50 -20 90 q-60 20 -80 -20 q-15 -40 10 -60 Z" fill="#c5e4c0"/><text x="305" y="215" font-size="9" fill="#4e7a47">Parco</text><path d="M0 0 L80 0 q-10 40 -50 55 Q5 65 0 50 Z" fill="#aed4ef"/><g fill="#dfe5e8"><rect x="40" y="95" width="55" height="45" rx="3"/><rect x="110" y="95" width="60" height="45" rx="3"/><rect x="40" y="160" width="55" height="55" rx="3"/><rect x="110" y="170" width="60" height="45" rx="3"/><rect x="190" y="40" width="70" height="50" rx="3"/><rect x="40" y="40" width="50" height="38" rx="3"/></g><g stroke="#c4ccd1" stroke-width="16" fill="none" stroke-linecap="round"><path d="M0 150 H400"/><path d="M100 0 V280"/><path d="M180 0 V280"/></g><g stroke="#ffffff" stroke-width="11" fill="none" stroke-linecap="round"><path d="M0 150 H400"/><path d="M100 0 V280"/><path d="M180 0 V280"/></g><path d="M0 235 H400" stroke="#f6e4a0" stroke-width="14" stroke-linecap="round"/><path d="M0 235 H400" stroke="#fff" stroke-width="2" stroke-dasharray="10 8"/><text x="210" y="145" font-size="8.5" fill="#8a97a0">Via Verdi</text><text x="106" y="120" font-size="8.5" fill="#8a97a0" transform="rotate(90 106 120)">Via Roma</text><text x="8" y="231" font-size="8.5" fill="#9a8a55">Viale Stazione</text><g transform="translate(225 95)"><circle cx="0" cy="0" r="11" fill="#123E90"/><path d="M-6 1 L0 -4 L6 1 V6 H-6 Z" fill="#fff"/><text x="0" y="24" font-size="9" fill="#123E90" text-anchor="middle" font-weight="700">Scuola</text></g><g transform="translate(330 110)"><circle cx="0" cy="0" r="11" fill="#123E90"/><g stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M-5 0H5"/><path d="M-5 -3V3M5 -3V3"/></g><text x="0" y="24" font-size="9" fill="#123E90" text-anchor="middle" font-weight="700">Palestra</text></g><g transform="translate(110 175)"><circle cx="0" cy="0" r="26" fill="#B8860B" opacity="0.16"/><circle cx="0" cy="0" r="18" fill="#B8860B" opacity="0.22"/><path d="M0 6 C-13 -6 -13 -22 0 -22 C13 -22 13 -6 0 6 Z" fill="#123E90"/><circle cx="0" cy="-14" r="7" fill="#fff"/><path d="M-4 -13 L0 -17 L4 -13 V-9 H-4 Z" fill="#123E90"/><text x="0" y="22" font-size="9.5" fill="#0B2A63" text-anchor="middle" font-weight="700">Casa Accorti</text></g></svg>';
+const ASSET_MAP = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" font-family="Atkinson Hyperlegible, system-ui, sans-serif"><title>Mappa del quartiere della Famiglia Accorti</title><rect width="400" height="280" fill="#e9eef1"/><path d="M270 150 q40 -30 90 -10 q20 50 -20 90 q-60 20 -80 -20 q-15 -40 10 -60 Z" fill="#c5e4c0"/><text x="305" y="215" font-size="9" fill="#4e7a47">Parco</text><path d="M0 0 L80 0 q-10 40 -50 55 Q5 65 0 50 Z" fill="#aed4ef"/><g fill="#dfe5e8"><rect x="40" y="95" width="55" height="45" rx="3"/><rect x="110" y="95" width="60" height="45" rx="3"/><rect x="40" y="160" width="55" height="55" rx="3"/><rect x="110" y="170" width="60" height="45" rx="3"/><rect x="190" y="40" width="70" height="50" rx="3"/><rect x="40" y="40" width="50" height="38" rx="3"/></g><g stroke="#c4ccd1" stroke-width="16" fill="none" stroke-linecap="round"><path d="M0 150 H400"/><path d="M100 0 V280"/><path d="M180 0 V280"/></g><g stroke="#ffffff" stroke-width="11" fill="none" stroke-linecap="round"><path d="M0 150 H400"/><path d="M100 0 V280"/><path d="M180 0 V280"/></g><path d="M0 235 H400" stroke="#f6e4a0" stroke-width="14" stroke-linecap="round"/><path d="M0 235 H400" stroke="#fff" stroke-width="2" stroke-dasharray="10 8"/><text x="206" y="145" font-size="8.5" fill="#8a97a0">Via Tuscolana</text><text x="106" y="116" font-size="8.5" fill="#8a97a0" transform="rotate(90 106 116)">Via Appia</text><text x="8" y="231" font-size="8.5" fill="#9a8a55">Viale Marconi</text><g transform="translate(225 95)"><circle cx="0" cy="0" r="11" fill="#123E90"/><path d="M-6 1 L0 -4 L6 1 V6 H-6 Z" fill="#fff"/><text x="0" y="24" font-size="9" fill="#123E90" text-anchor="middle" font-weight="700">Scuola</text></g><g transform="translate(330 110)"><circle cx="0" cy="0" r="11" fill="#123E90"/><g stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M-5 0H5"/><path d="M-5 -3V3M5 -3V3"/></g><text x="0" y="24" font-size="9" fill="#123E90" text-anchor="middle" font-weight="700">Palestra</text></g><g transform="translate(110 175)"><circle cx="0" cy="0" r="26" fill="#B8860B" opacity="0.16"/><circle cx="0" cy="0" r="18" fill="#B8860B" opacity="0.22"/><path d="M0 6 C-13 -6 -13 -22 0 -22 C13 -22 13 -6 0 6 Z" fill="#123E90"/><circle cx="0" cy="-14" r="7" fill="#fff"/><path d="M-4 -13 L0 -17 L4 -13 V-9 H-4 Z" fill="#123E90"/><text x="0" y="22" font-size="9.5" fill="#0B2A63" text-anchor="middle" font-weight="700">Casa Accorti</text></g></svg>';
 
-const ASSET_CIE = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 214" role="img" font-family="Atkinson Hyperlegible, system-ui, sans-serif"><title>Carta d\'Identit&agrave; Elettronica esposta</title><defs><linearGradient id="cieg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3f4f7"/><stop offset="1" stop-color="#dfe3ec"/></linearGradient><clipPath id="ciecard"><rect x="0" y="0" width="340" height="214" rx="14"/></clipPath></defs><g clip-path="url(#ciecard)"><rect width="340" height="214" fill="url(#cieg)"/><g stroke="#c9d0de" stroke-width="0.7" fill="none" opacity="0.6"><path d="M-20 60 q60 -30 120 0 t120 0 t120 0 t120 0"/><path d="M-20 80 q60 -30 120 0 t120 0 t120 0 t120 0"/><path d="M-20 170 q60 -30 120 0 t120 0 t120 0 t120 0"/></g><g transform="translate(0,0)"><rect x="0" y="0" width="113" height="7" fill="#0a7a3f"/><rect x="113" y="0" width="114" height="7" fill="#f4f4f4"/><rect x="227" y="0" width="113" height="7" fill="#bb2d2d"/></g><text x="18" y="28" font-size="9.5" letter-spacing="1.2" fill="#0B2A63" font-weight="700">REPUBBLICA ITALIANA</text><text x="18" y="42" font-size="12" letter-spacing="0.6" fill="#123E90" font-weight="700">CARTA DI IDENTIT&Agrave;</text><text x="312" y="40" font-size="15" fill="#123E90" font-weight="700" text-anchor="end" font-family="Lexend, sans-serif">CIE</text><g transform="translate(18,58)"><rect x="0" y="0" width="80" height="100" rx="4" fill="#cfd6e2"/><circle cx="40" cy="38" r="20" fill="#9aa6ba"/><path d="M10 96 C12 66 68 66 70 96 Z" fill="#9aa6ba"/></g><g transform="translate(116,150)"><rect x="0" y="0" width="34" height="26" rx="4" fill="#cda434"/><rect x="2" y="2" width="30" height="22" rx="3" fill="#e3c45e"/><g stroke="#b6902a" stroke-width="1.2"><path d="M0 9H34M0 17H34M11 0V26M23 0V26"/></g><rect x="11" y="9" width="12" height="8" fill="#d9b945"/></g><g font-size="6.5" fill="#7a869a" letter-spacing="0.5"><text x="116" y="64">COGNOME / SURNAME</text><text x="116" y="88">NOME / NAME</text><text x="116" y="112">NATO/A IL / DATE OF BIRTH</text><text x="232" y="112">SESSO / SEX</text><text x="116" y="136">COMUNE / MUNICIPALITY</text></g><g font-size="11" fill="#1b2540" font-weight="700"><text x="116" y="76">ACCORTI</text><text x="116" y="100">PAOLO</text><text x="116" y="124">14.03.1951</text><text x="232" y="124">M</text><text x="116" y="148">ORZINUOVI (BS)</text></g><text x="312" y="200" font-size="9" fill="#5a6480" text-anchor="end" font-family="monospace">CA 1234 5678</text><circle cx="295" cy="120" r="20" fill="none" stroke="#a9b4c8" stroke-width="1.4" opacity="0.7"/><circle cx="295" cy="120" r="11" fill="#e9ecf3" opacity="0.7"/><g transform="rotate(-9 250 70)"><rect x="150" y="58" width="210" height="22" fill="#B8860B" opacity="0.92"/><text x="255" y="73" font-size="12" fill="#fff" text-anchor="middle" font-weight="700" letter-spacing="2">IDENTIT&Agrave; ESPOSTA</text></g></g><rect x="0.5" y="0.5" width="339" height="213" rx="14" fill="none" stroke="#c2c9d6"/></svg>';
+const ASSET_CIE = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 214" role="img" font-family="Atkinson Hyperlegible, system-ui, sans-serif"><title>Carta d\'Identit&agrave; Elettronica esposta</title><defs><linearGradient id="cieg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3f4f7"/><stop offset="1" stop-color="#dfe3ec"/></linearGradient><clipPath id="ciecard"><rect x="0" y="0" width="340" height="214" rx="14"/></clipPath></defs><g clip-path="url(#ciecard)"><rect width="340" height="214" fill="url(#cieg)"/><g stroke="#c9d0de" stroke-width="0.7" fill="none" opacity="0.6"><path d="M-20 60 q60 -30 120 0 t120 0 t120 0 t120 0"/><path d="M-20 80 q60 -30 120 0 t120 0 t120 0 t120 0"/><path d="M-20 170 q60 -30 120 0 t120 0 t120 0 t120 0"/></g><g transform="translate(0,0)"><rect x="0" y="0" width="113" height="7" fill="#0a7a3f"/><rect x="113" y="0" width="114" height="7" fill="#f4f4f4"/><rect x="227" y="0" width="113" height="7" fill="#bb2d2d"/></g><text x="18" y="28" font-size="9.5" letter-spacing="1.2" fill="#0B2A63" font-weight="700">REPUBBLICA ITALIANA</text><text x="18" y="42" font-size="12" letter-spacing="0.6" fill="#123E90" font-weight="700">CARTA DI IDENTIT&Agrave;</text><text x="312" y="40" font-size="15" fill="#123E90" font-weight="700" text-anchor="end" font-family="Lexend, sans-serif">CIE</text><g transform="translate(18,58)"><rect x="0" y="0" width="80" height="100" rx="4" fill="#cfd6e2"/><circle cx="40" cy="38" r="20" fill="#9aa6ba"/><path d="M10 96 C12 66 68 66 70 96 Z" fill="#9aa6ba"/></g><g transform="translate(116,150)"><rect x="0" y="0" width="34" height="26" rx="4" fill="#cda434"/><rect x="2" y="2" width="30" height="22" rx="3" fill="#e3c45e"/><g stroke="#b6902a" stroke-width="1.2"><path d="M0 9H34M0 17H34M11 0V26M23 0V26"/></g><rect x="11" y="9" width="12" height="8" fill="#d9b945"/></g><g font-size="6.5" fill="#7a869a" letter-spacing="0.5"><text x="116" y="64">COGNOME / SURNAME</text><text x="116" y="88">NOME / NAME</text><text x="116" y="112">NATO/A IL / DATE OF BIRTH</text><text x="232" y="112">SESSO / SEX</text><text x="116" y="136">COMUNE / MUNICIPALITY</text></g><g font-size="11" fill="#1b2540" font-weight="700"><text x="116" y="76">ACCORTI</text><text x="116" y="100">PAOLO</text><text x="116" y="124">14.03.1951</text><text x="232" y="124">M</text><text x="116" y="148">ROMA (RM)</text></g><text x="312" y="200" font-size="9" fill="#5a6480" text-anchor="end" font-family="monospace">CA 1234 5678</text><circle cx="295" cy="120" r="20" fill="none" stroke="#a9b4c8" stroke-width="1.4" opacity="0.7"/><circle cx="295" cy="120" r="11" fill="#e9ecf3" opacity="0.7"/><g transform="rotate(-9 250 70)"><rect x="150" y="58" width="210" height="22" fill="#B8860B" opacity="0.92"/><text x="255" y="73" font-size="12" fill="#fff" text-anchor="middle" font-weight="700" letter-spacing="2">IDENTIT&Agrave; ESPOSTA</text></g></g><rect x="0.5" y="0.5" width="339" height="213" rx="14" fill="none" stroke="#c2c9d6"/></svg>';
 
 const FOTO_SPIAGGIA = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img"><title>Foto vacanza al mare</title><rect width="120" height="120" fill="#bfe3f7"/><circle cx="92" cy="26" r="13" fill="#ffd45e"/><rect x="0" y="66" width="120" height="34" fill="#5bbbe0"/><path d="M0 84 q30 -8 60 0 t60 0 V100 H0 Z" fill="#7fd0ee"/><rect x="0" y="96" width="120" height="24" fill="#f2dca0"/><path d="M0 96 q60 -10 120 0 V100 H0 Z" fill="#e9cf86"/><g transform="translate(30 70)"><path d="M0 26 L0 -2" stroke="#9a6b3f" stroke-width="2.4"/><path d="M0 -2 q-20 -4 -22 8 q14 -6 22 0 q8 -6 22 0 q-2 -12 -22 -8 Z" fill="#e2654f"/></g><g transform="translate(80 88)"><ellipse cx="0" cy="10" rx="13" ry="4" fill="#d8b86a"/><path d="M-10 10 q10 -16 20 0" fill="#ef8b5c"/></g></svg>';
 
